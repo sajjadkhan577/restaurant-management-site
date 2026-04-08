@@ -124,6 +124,7 @@ const Cart = {
             const drawer = document.createElement('aside');
             drawer.id = 'cart-drawer';
             drawer.className = 'fixed right-0 top-0 h-full w-[90%] md:w-96 z-[100] rounded-l-3xl bg-surface-container-high/90 backdrop-blur-2xl shadow-[-20px_0px_60px_rgba(0,0,0,0.5)] flex flex-col p-8 gap-6 translate-x-full transition-transform duration-300 hidden border-l border-white/5';
+            drawer.style.display = 'none';
             drawer.innerHTML = `
                 <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-4">
                     <div>
@@ -156,20 +157,19 @@ const Cart = {
         if (!drawer) return;
         
         if (show === undefined) {
-            const isHidden = drawer.classList.contains('translate-x-full');
-            if (isHidden) {
-                drawer.classList.remove('hidden');
-                setTimeout(() => drawer.classList.remove('translate-x-full'), 10);
-            } else {
-                drawer.classList.add('translate-x-full');
-                setTimeout(() => drawer.classList.add('hidden'), 300);
-            }
-        } else if (show) {
+            show = drawer.classList.contains('translate-x-full');
+        }
+        if (show) {
+            drawer.style.display = 'flex';
             drawer.classList.remove('hidden');
+            void drawer.offsetWidth;
             setTimeout(() => drawer.classList.remove('translate-x-full'), 10);
         } else {
             drawer.classList.add('translate-x-full');
-            setTimeout(() => drawer.classList.add('hidden'), 300);
+            setTimeout(() => {
+                drawer.classList.add('hidden');
+                if(drawer.classList.contains('translate-x-full')) drawer.style.display = 'none';
+            }, 300);
         }
     },
     
@@ -268,6 +268,7 @@ const ItemDetails = {
             const modal = document.createElement('div');
             modal.id = 'item-detail-modal';
             modal.className = 'fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300';
+            modal.style.display = 'none';
             modal.innerHTML = `
                 <div class="bg-surface-container-high w-[90%] max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl transform scale-90 transition-all duration-300 modal-container border border-white/10">
                     <div class="relative h-72">
@@ -322,6 +323,8 @@ const ItemDetails = {
             this.hide();
         };
         
+        modal.style.display = 'flex';
+        void modal.offsetWidth; // Force reflow
         modal.classList.remove('opacity-0', 'pointer-events-none');
         container.classList.remove('scale-90');
         container.classList.add('scale-100');
@@ -333,6 +336,7 @@ const ItemDetails = {
         modal.classList.add('opacity-0', 'pointer-events-none');
         container.classList.remove('scale-100');
         container.classList.add('scale-90');
+        setTimeout(() => { if (modal.classList.contains('opacity-0')) modal.style.display = 'none'; }, 300);
     }
 };
 
@@ -343,6 +347,7 @@ const Checkout = {
             const modal = document.createElement('div');
             modal.id = 'checkout-modal';
             modal.className = 'fixed inset-0 z-[300] flex items-center justify-center bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-300';
+            modal.style.display = 'none';
             modal.innerHTML = `
                 <div class="bg-surface-container w-[90%] max-w-md rounded-[3rem] p-12 space-y-10 shadow-2xl border border-white/5 transform scale-95 transition-all duration-300 checkout-container">
                     <div class="text-center space-y-2">
@@ -395,6 +400,8 @@ const Checkout = {
         }
         const modal = document.getElementById('checkout-modal');
         const container = modal.querySelector('.checkout-container');
+        modal.style.display = 'flex';
+        void modal.offsetWidth; // force reflow
         modal.classList.remove('opacity-0', 'pointer-events-none');
         container.classList.remove('scale-95');
         container.classList.add('scale-100');
@@ -412,6 +419,7 @@ const Checkout = {
         modal.classList.add('opacity-0', 'pointer-events-none');
         container.classList.remove('scale-100');
         container.classList.add('scale-95');
+        setTimeout(() => { if (modal.classList.contains('opacity-0')) modal.style.display = 'none'; }, 300);
     },
 
     finalize() {
@@ -516,6 +524,7 @@ const Booking = {
             const modal = document.createElement('div');
             modal.id = 'booking-modal';
             modal.className = 'fixed inset-0 z-[400] flex items-center justify-center bg-black/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-300';
+            modal.style.display = 'none';
             modal.innerHTML = `
                 <div class="bg-surface-container w-[95%] max-w-lg rounded-[3rem] p-10 md:p-12 space-y-8 shadow-2xl border border-white/5 transform scale-95 transition-all duration-300 booking-container">
                     <div class="text-center space-y-2">
@@ -597,6 +606,8 @@ const Booking = {
         const modal = document.getElementById('booking-modal');
         if (!modal) { this.init(); return this.show(); }
         const container = modal.querySelector('.booking-container');
+        modal.style.display = 'flex';
+        void modal.offsetWidth; // Force reflow
         modal.classList.remove('opacity-0', 'pointer-events-none');
         container.classList.remove('scale-95');
         container.classList.add('scale-100');
@@ -612,6 +623,7 @@ const Booking = {
         modal.classList.add('opacity-0', 'pointer-events-none');
         container.classList.remove('scale-100');
         container.classList.add('scale-95');
+        setTimeout(() => { if (modal.classList.contains('opacity-0')) modal.style.display = 'none'; }, 300);
     }
 };
 
