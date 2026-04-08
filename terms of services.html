@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#e9c349",
+              "on-primary": "#3c2f00",
+              "on-primary-fixed": "#241a00",
+              "tertiary-fixed-dim": "#4ae183",
+              "surface": "#131313",
+              "on-tertiary-fixed": "#00210c",
+              "secondary": "#ffb783",
+              "primary-fixed-dim": "#e9c349",
+              "primary-fixed": "#ffe088",
+              "on-surface-variant": "#d0c5af",
+              "secondary-container": "#db7619",
+              "surface-dim": "#131313",
+              "outline-variant": "#4d4635",
+              "on-tertiary-container": "#005027",
+              "inverse-primary": "#735c00",
+              "error-container": "#93000a",
+              "outline": "#99907c",
+              "on-secondary-container": "#451f00",
+              "tertiary-container": "#2ecc71",
+              "surface-bright": "#393939",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-fixed-variant": "#713700",
+              "on-tertiary-fixed-variant": "#005228",
+              "on-secondary-fixed": "#301400",
+              "on-secondary": "#4f2500",
+              "tertiary-fixed": "#6bfe9c",
+              "inverse-on-surface": "#313030",
+              "secondary-fixed-dim": "#ffb783",
+              "on-background": "#e5e2e1",
+              "secondary-fixed": "#ffdcc5",
+              "surface-container": "#201f1f",
+              "on-tertiary": "#003919",
+              "primary": "#f2ca50",
+              "on-primary-container": "#554300",
+              "primary-container": "#d4af37",
+              "on-primary-fixed-variant": "#574500",
+              "on-error": "#690005",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-variant": "#353534",
+              "surface-container-low": "#1c1b1b",
+              "on-surface": "#e5e2e1",
+              "tertiary": "#54e98a",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#353534",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2e1",
+              "background": "#131313"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #131313;
+        color: #e5e2e1;
+        font-family: 'Inter', sans-serif;
+      }
+      .glass-card {
+        background: rgba(32, 31, 31, 0.4);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar (Standardized) -->
+<nav class="fixed top-0 w-full z-50 bg-surface-variant/40 backdrop-blur-3xl shadow-2xl shadow-black/20 no-border">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-manrope font-extrabold tracking-tighter text-white">
+    The Gastronomic Editorial
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a id="nav-experience" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="index.html">Experience</a>
+<a id="nav-menu" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="menu.html">Menu</a>
+<a id="nav-live" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="live.html">Live Kitchen</a>
+<a id="nav-track" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="track.html">Track</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="profile.html" class="text-white hover:scale-105 transition-transform duration-300" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="text-white hover:scale-105 transition-transform duration-300 relative" data-id="cart-toggle" title="Cart">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center cart-badge hidden">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Header -->
+<header class="relative pt-40 pb-20 px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface to-surface"></div>
+<img alt="Restaurant ambiance" class="w-full h-full object-cover opacity-20 grayscale" data-alt="atmospheric dark interior of a high-end luxury restaurant with dim warm lighting and elegant table settings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE0Dm7EKJm3hSxt7SneSHh5POt3hrl3uIYCrc6biz7tVu-dNd0bq_bk3l_8HlW0ykpVd8rwMS_E4wGbbST_R3xKtyqvXHNAlY6oueSQzegwR8CzJ4sUjnZUJNQJVyb9Fsm9SYJrmTVCxLLDRZgyMc713JCmcBvxVkRUh5NdsaCKmcThGXRMdCuFVYBhoGifKBp_249zbKG_HIu3uyqQ43ChPFCIcCdvL5mIBqNaoQJziqZdNvjMzcG8q24KtrO5Atu9UPOOHlN7gRo"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center">
+<span class="text-primary font-headline font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Legal Framework</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-on-surface mb-6">Terms of Service</h1>
+<p class="text-neutral-400 font-body text-lg max-w-2xl mx-auto">
+                Welcome to The Gastronomic Editorial. These terms govern your engagement with our curated culinary digital experience.
+            </p>
+<div class="mt-8 flex justify-center gap-4">
+<div class="h-[1px] w-12 bg-outline-variant/30 self-center"></div>
+<span class="text-neutral-500 text-xs font-label">Last Updated: October 2024</span>
+<div class="h-[1px] w-12 bg-outline-variant/30 self-center"></div>
+</div>
+</div>
+</header>
+<!-- Content Layout -->
+<main class="max-w-6xl mx-auto px-8 pb-32 grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Sidebar Navigation -->
+<aside class="lg:col-span-3 hidden lg:block">
+<div class="sticky top-32 space-y-8">
+<div class="space-y-4">
+<h3 class="text-xs font-headline font-bold uppercase tracking-widest text-primary/60">Sections</h3>
+<nav class="flex flex-col gap-3">
+<a class="text-sm font-label text-primary font-bold border-l-2 border-primary pl-4 transition-all" href="#introduction">Introduction</a>
+<a class="text-sm font-label text-neutral-500 hover:text-neutral-300 pl-4 border-l-2 border-transparent transition-all" href="#user-conduct">User Conduct</a>
+<a class="text-sm font-label text-neutral-500 hover:text-neutral-300 pl-4 border-l-2 border-transparent transition-all" href="#intellectual-property">Intellectual Property</a>
+<a class="text-sm font-label text-neutral-500 hover:text-neutral-300 pl-4 border-l-2 border-transparent transition-all" href="#limitation">Limitation of Liability</a>
+<a class="text-sm font-label text-neutral-500 hover:text-neutral-300 pl-4 border-l-2 border-transparent transition-all" href="#privacy">Privacy Integration</a>
+</nav>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<p class="text-xs text-neutral-500 leading-relaxed">
+                        Need a physical copy? Download our comprehensive legal documentation in PDF format.
+                    </p>
+<button class="mt-4 flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-wider hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Download PDF
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Legal Text Area -->
+<article class="lg:col-span-9 space-y-24">
+<!-- Intro Section -->
+<section class="scroll-mt-32" id="introduction">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<h2 class="text-3xl font-headline font-bold tracking-tight">1. Introduction</h2>
+</div>
+<div class="prose prose-invert max-w-none space-y-6 text-neutral-400 font-body leading-relaxed">
+<p>
+                        By accessing <span class="text-on-surface font-semibold">The Gastronomic Editorial</span>, you are entering into a binding agreement with Gastronomic Media Group LLC. This digital concierge service is designed to provide editorial content, reservation facilitation, and boutique culinary insights.
+                    </p>
+<p>
+                        Accessing our services implies unconditional acceptance of these terms. If you do not agree with any part of these provisions, we respectfully request that you discontinue your use of our platform immediately.
+                    </p>
+</div>
+</section>
+<!-- User Conduct Bento Card -->
+<section class="scroll-mt-32" id="user-conduct">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<h2 class="text-3xl font-headline font-bold tracking-tight">2. User Conduct</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="glass-card p-8 rounded-2xl border border-outline-variant/10 group hover:bg-surface-container transition-colors duration-500">
+<h4 class="text-primary font-headline font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span> Authentic Interaction
+                        </h4>
+<p class="text-sm text-neutral-400 leading-relaxed">
+                            Users must provide accurate information for reservations. Misrepresentation or "no-show" patterns without prior cancellation may result in service restriction or permanent ban from the Editorial circle.
+                        </p>
+</div>
+<div class="glass-card p-8 rounded-2xl border border-outline-variant/10 group hover:bg-surface-container transition-colors duration-500">
+<h4 class="text-primary font-headline font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span> Prohibited Use
+                        </h4>
+<p class="text-sm text-neutral-400 leading-relaxed">
+                            Automated scraping of our editorial content, menus, or pricing data is strictly prohibited. Any attempt to disrupt service integrity will be met with legal action and IP blacklisting.
+                        </p>
+</div>
+</div>
+</section>
+<!-- Intellectual Property -->
+<section class="scroll-mt-32" id="intellectual-property">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="brush">brush</span>
+</div>
+<h2 class="text-3xl font-headline font-bold tracking-tight">3. Intellectual Property</h2>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-10 relative overflow-hidden">
+<div class="relative z-10 space-y-6">
+<p class="text-neutral-300 font-body leading-relaxed">
+                            Every pixel, word, and curated photograph within <span class="text-secondary italic">The Gastronomic Editorial</span> is the exclusive property of our network of creators. 
+                        </p>
+<div class="h-px bg-outline-variant/20 w-full"></div>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="check_circle">check_circle</span>
+<span class="text-sm text-neutral-400"><strong class="text-on-surface">Digital Assets:</strong> Our bespoke photography and cinematography are watermarked and protected by international copyright law.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="check_circle">check_circle</span>
+<span class="text-sm text-neutral-400"><strong class="text-on-surface">Editorial Copy:</strong> Review text, "Maitre d' insights," and culinary guides may not be reproduced without explicit written consent.</span>
+</li>
+</ul>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+</section>
+<!-- Limitation of Liability -->
+<section class="scroll-mt-32" id="limitation">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="report">report</span>
+</div>
+<h2 class="text-3xl font-headline font-bold tracking-tight">4. Limitation of Liability</h2>
+</div>
+<div class="border-l-4 border-outline-variant pl-8 space-y-6">
+<p class="text-neutral-400 italic text-lg leading-relaxed">
+                        "The Digital Maître d’ acts as a facilitator of experiences, not a guarantor of final delivery."
+                    </p>
+<p class="text-sm text-neutral-500 leading-relaxed uppercase tracking-tighter font-bold">
+                        TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE GASTRONOMIC EDITORIAL SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY.
+                    </p>
+<p class="text-sm text-neutral-400 leading-relaxed">
+                        We facilitate reservations with third-party establishments. We are not responsible for the quality of service, dietary accuracy, or individual experiences at partner restaurants. All such issues must be resolved directly with the venue management.
+                    </p>
+</div>
+</section>
+<!-- CTA Section -->
+<div class="pt-12">
+<div class="p-12 bg-gradient-to-br from-primary/10 to-transparent rounded-[2.5rem] border border-primary/20 text-center">
+<h3 class="text-2xl font-headline font-bold mb-4">Questions regarding these terms?</h3>
+<p class="text-neutral-400 mb-8 max-w-md mx-auto">Our legal concierges are available to clarify any aspect of our service commitment.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-8 py-3 rounded-full hover:shadow-xl hover:shadow-primary/20 transition-all active:scale-95">
+                            Contact Legal Team
+                        </button>
+<button class="bg-surface-variant/20 backdrop-blur-md border border-outline-variant/30 text-on-surface font-bold px-8 py-3 rounded-full hover:bg-surface-variant/40 transition-all">
+                            Help Center
+                        </button>
+</div>
+</div>
+</div>
+</article>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-surface border-t border-white/5 pb-32 md:pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-manrope font-bold text-white/80">
+                The Gastronomic Editorial
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="privacy policy.html">Privacy Policy</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="terms of services.html">Terms of Service</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="press.html">Press Kit</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="sustainability.html">Sustainability</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest text-gray-600 uppercase">
+                © 2024 The Gastronomic Editorial. All rights reserved.
+            </div>
+</div>
+</footer>
+
+<!-- Standardized Bottom Mobile Navigation (Floating Island) -->
+<nav id="mobile-nav" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full px-6 py-3 z-50 bg-surface-variant/40 backdrop-blur-2xl shadow-xl shadow-black/40 border border-white/10 flex justify-around items-center">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium mt-1">Home</span>
+</a>
+<a href="menu.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-inter text-[10px] font-medium mt-1">Menu</span>
+</a>
+<a href="live.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">videocam</span>
+<span class="font-inter text-[10px] font-medium mt-1">Live</span>
+</a>
+<a href="track.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-inter text-[10px] font-medium mt-1">Track</span>
+</a>
+</nav>
+
+<script src="script.js"></script>
+</body></html>
+</body></html>

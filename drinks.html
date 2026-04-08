@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@200;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#353534",
+              "on-secondary-container": "#451f00",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-fixed": "#6bfe9c",
+              "background": "#131313",
+              "on-primary-fixed": "#241a00",
+              "secondary-fixed": "#ffdcc5",
+              "secondary": "#ffb783",
+              "on-surface-variant": "#d0c5af",
+              "tertiary-container": "#2ecc71",
+              "surface-tint": "#e9c349",
+              "inverse-primary": "#735c00",
+              "on-tertiary-container": "#005027",
+              "tertiary-fixed-dim": "#4ae183",
+              "on-primary": "#3c2f00",
+              "surface": "#131313",
+              "surface-bright": "#393939",
+              "on-secondary": "#4f2500",
+              "on-primary-fixed-variant": "#574500",
+              "outline": "#99907c",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "tertiary": "#54e98a",
+              "surface-container-lowest": "#0e0e0e",
+              "on-tertiary": "#003919",
+              "surface-variant": "#353534",
+              "error": "#ffb4ab",
+              "surface-container": "#201f1f",
+              "primary-container": "#d4af37",
+              "on-tertiary-fixed-variant": "#005228",
+              "surface-dim": "#131313",
+              "primary-fixed": "#ffe088",
+              "secondary-fixed-dim": "#ffb783",
+              "outline-variant": "#4d4635",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "secondary-container": "#db7619",
+              "primary": "#f2ca50",
+              "on-secondary-fixed-variant": "#713700",
+              "on-primary-container": "#554300",
+              "on-tertiary-fixed": "#00210c",
+              "primary-fixed-dim": "#e9c349",
+              "on-background": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "on-surface": "#e5e2e1",
+              "on-secondary-fixed": "#301400"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #131313;
+        color: #e5e2e1;
+      }
+      .glass-card {
+        background: rgba(32, 31, 31, 0.4);
+        backdrop-filter: blur(24px);
+      }
+      .text-gradient-gold {
+        background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- Top Navigation Bar (Standardized) -->
+<nav class="fixed top-0 w-full z-50 bg-surface-variant/40 backdrop-blur-3xl shadow-2xl shadow-black/20 no-border">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-manrope font-extrabold tracking-tighter text-white">
+    The Gastronomic Editorial
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a id="nav-experience" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="index.html">Experience</a>
+<a id="nav-menu" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="menu.html">Menu</a>
+<a id="nav-live" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="live.html">Live Kitchen</a>
+<a id="nav-track" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="track.html">Track</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="profile.html" class="text-white hover:scale-105 transition-transform duration-300" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="text-white hover:scale-105 transition-transform duration-300 relative" data-id="cart-toggle" title="Cart">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center cart-badge hidden">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Side Navigation (Web Only) -->
+<aside class="hidden lg:flex flex-col h-full py-8 bg-[#1c1b1b] w-72 fixed left-0 top-0 pt-24 z-40 border-r border-white/5">
+<div class="px-8 mb-10">
+<h2 class="text-lg font-black text-[#f2ca50] font-headline user-name-display">The Connoisseur</h2>
+<p class="text-neutral-500 font-['Inter'] font-medium text-xs uppercase tracking-widest">Gold Member</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="menu.html">
+<span class="material-symbols-outlined text-lg">local_pizza</span>
+                Gourmet Pizza
+            </a>
+<a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="burgur.html">
+<span class="material-symbols-outlined text-lg">lunch_dining</span>
+                Gourmet Burgers
+            </a>
+<a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="BBQ.html">
+<span class="material-symbols-outlined text-lg">outdoor_grill</span>
+                Smoked BBQ
+            </a>
+<a class="flex items-center gap-4 py-3 font-['Inter'] font-bold text-[#d4af37] border-l-4 border-[#f2ca50] pl-4 bg-[#201f1f] transition-all translate-x-1 duration-200" href="drinks.html">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">local_bar</span>
+                The Liquid Press
+            </a>
+<a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="dessert.html">
+<span class="material-symbols-outlined text-lg">cake</span>
+                Sweet Finale
+            </a>
+<a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="track.html">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+                Track Order
+            </a>
+<a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="profile.html">
+<span class="material-symbols-outlined text-lg">history</span>
+                Order History
+            </a>
+</nav>
+<div class="mt-auto px-6">
+<button class="w-full py-4 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-sm uppercase tracking-widest shadow-xl shadow-primary/10 hover:scale-[1.02] active:scale-95 transition-all">
+                Book a Table
+            </button>
+</div>
+</aside>
+<main class="lg:ml-72 pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Mobile Category Filter (Horizontal Scroll) -->
+<nav class="lg:hidden flex overflow-x-auto py-6 mb-12 gap-4 no-scrollbar -mx-8 px-8 sticky top-[72px] z-30 bg-background/80 backdrop-blur-xl border-b border-white/5 category-scroll">
+    <a href="menu.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">local_pizza</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Pizza</span>
+    </a>
+    <a href="burgur.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">lunch_dining</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Burgers</span>
+    </a>
+    <a href="BBQ.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">outdoor_grill</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">BBQ</span>
+    </a>
+    <a href="drinks.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">local_bar</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Drinks</span>
+    </a>
+    <a href="dessert.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">icecream</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Desserts</span>
+    </a>
+</nav>
+<!-- Hero Section -->
+<header class="mb-20 text-center lg:text-left">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 text-gradient-gold">
+                The Liquid Press
+            </h1>
+<p class="max-w-2xl text-on-surface-variant text-lg md:text-xl font-light leading-relaxed">
+                An editorial exploration of rare vintages, progressive mixology, and the soulful craft of distillation.
+            </p>
+</header>
+<!-- Section: Artisanal Cocktails -->
+<section class="mb-32" id="cocktails">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline text-3xl font-bold tracking-tight border-l-4 border-primary pl-6 uppercase">Artisanal Cocktails</h2>
+<span class="text-primary font-label text-sm tracking-widest uppercase">Vol. I — The Alchemist</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Large Featured Cocktail Card -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container h-[500px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Moody dark atmospheric photo of a Midnight Negroni cocktail on a dark marble bar with a single large ice cube and orange zest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIy1wdMlUCFRkKw0UpAFTYtBQ5YAI86Okpk6neGnFTr8e_Z27AoTTh4AlZXQp02U-qJlDnxP434FFs_zMmPtf9Bpmt5D8tysF2q04ZDln6oJ7wdtI4Ev2fovtwBzWJcqn5fMLldrz1h7lvmUMY9MQOU4Uyh8yqmKhLod_wm0uNZlJx5LVr7YvVX55XEkcwN6sr9yK-T36E5jXiM0vQOAluEIOhfUHRUy0UPXwTdMOfIvsA-7rK4iZf4mW5W0Ysl7Tr7ikLgItHR07V"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 max-w-xl">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-4 backdrop-blur-md">Signature</span>
+<h3 class="font-headline text-4xl font-bold mb-4 cursor-pointer hover:text-primary transition-colors" onclick="ItemDetails.show({name: 'Midnight Negroni', price: 24, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAIy1wdMlUCFRkKw0UpAFTYtBQ5YAI86Okpk6neGnFTr8e_Z27AoTTh4AlZXQp02U-qJlDnxP434FFs_zMmPtf9Bpmt5D8tysF2q04ZDln6oJ7wdtI4Ev2fovtwBzWJcqn5fMLldrz1h7lvmUMY9MQOU4Uyh8yqmKhLod_wm0uNZlJx5LVr7YvVX55XEkcwN6sr9yK-T36E5jXiM0vQOAluEIOhfUHRUy0UPXwTdMOfIvsA-7rK4iZf4mW5W0Ysl7Tr7ikLgItHR07V', type: 'cocktail', description: 'Blackberry-infused gin, artisanal bitter rouge, and cedar-smoked vermouth. Served over a hand-carved crystal sphere.', ingredients: 'Blackberry Gin, Bitter Rouge, Smoked Vermouth, Crystal Ice Sphere.'})">Midnight Negroni</h3>
+<p class="text-on-surface-variant mb-6 text-lg">Blackberry-infused gin, artisanal bitter rouge, and cedar-smoked vermouth. Served over a hand-carved crystal sphere.</p>
+<div class="flex items-center gap-6">
+<span class="text-primary font-bold text-2xl">$24</span>
+<button onclick="Cart.addItem({name: 'Midnight Negroni', price: 24, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAIy1wdMlUCFRkKw0UpAFTYtBQ5YAI86Okpk6neGnFTr8e_Z27AoTTh4AlZXQp02U-qJlDnxP434FFs_zMmPtf9Bpmt5D8tysF2q04ZDln6oJ7wdtI4Ev2fovtwBzWJcqn5fMLldrz1h7lvmUMY9MQOU4Uyh8yqmKhLod_wm0uNZlJx5LVr7YvVX55XEkcwN6sr9yK-T36E5jXiM0vQOAluEIOhfUHRUy0UPXwTdMOfIvsA-7rK4iZf4mW5W0Ysl7Tr7ikLgItHR07V', type: 'cocktail'})" class="px-6 py-2 bg-primary text-on-primary font-black uppercase tracking-widest text-[10px] rounded-full hover:scale-105 transition-all">Add to Selection</button>
+</div>
+</div>
+</div>
+<!-- Secondary Cocktails Bento -->
+<div class="flex flex-col gap-6">
+<div class="bg-surface-container-low p-8 rounded-xl flex gap-6 items-center transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a vibrant green botanical cocktail with herb garnish in a delicate coupe glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLxDlUQuxIxzsBdy10qc1OpZigV4xu_zg5uXU56O6SWOqI6l0FbeR2-EB46nAS6TZ80ZvfCFpEXk1UkreQ5Ch7RbNco_4K8mO9gkeCwCwzVzVIS2g3xITGDoAe5_TP0ZqFIVOTzXoJJmjuteNV23Bq7SKH1tUKAgIF-Ebf5rVd7djk0Tbwbw5yqaKzHDNLdYWu_Eh6OmK1JoccyLeTROjgZ0T4tmJv4NNwFZnfqqiRxCWDhtHw5K8wTHkhqLhlTZHEgLg-k75fn2t0"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold mb-1 cursor-pointer hover:text-primary transition-colors" onclick="ItemDetails.show({name: 'Botanist’s Secret', price: 19, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLxDlUQuxIxzsBdy10qc1OpZigV4xu_zg5uXU56O6SWOqI6l0FbeR2-EB46nAS6TZ80ZvfCFpEXk1UkreQ5Ch7RbNco_4K8mO9gkeCwCwzVzVIS2g3xITGDoAe5_TP0ZqFIVOTzXoJJmjuteNV23Bq7SKH1tUKAgIF-Ebf5rVd7djk0Tbwbw5yqaKzHDNLdYWu_Eh6OmK1JoccyLeTROjgZ0T4tmJv4NNwFZnfqqiRxCWDhtHw5K8wTHkhqLhlTZHEgLg-k75fn2t0', type: 'cocktail', description: 'Small-batch rye, chartreuse, forest honey, and expressed sage.', ingredients: 'Small-batch Rye, Chartreuse, Forest Honey, Sage.'})">Botanist’s Secret</h4>
+<p class="text-sm text-on-surface-variant mb-3">Small-batch rye, chartreuse, forest honey, and expressed sage.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-semibold">$19</span>
+<button onclick="Cart.addItem({name: 'Botanist’s Secret', price: 19, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLxDlUQuxIxzsBdy10qc1OpZigV4xu_zg5uXU56O6SWOqI6l0FbeR2-EB46nAS6TZ80ZvfCFpEXk1UkreQ5Ch7RbNco_4K8mO9gkeCwCwzVzVIS2g3xITGDoAe5_TP0ZqFIVOTzXoJJmjuteNV23Bq7SKH1tUKAgIF-Ebf5rVd7djk0Tbwbw5yqaKzHDNLdYWu_Eh6OmK1JoccyLeTROjgZ0T4tmJv4NNwFZnfqqiRxCWDhtHw5K8wTHkhqLhlTZHEgLg-k75fn2t0', type: 'cocktail'})" class="p-2 bg-white/5 hover:bg-primary hover:text-on-primary rounded-full transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex gap-6 items-center transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A glass of amber colored liquid with smoke curling around it on a dark textured surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj2hQ0reRIkZM5ngTqxboZRVNM55UunkFCEDO1TWJ5s23_dKIcUSavDPMCQofkhoqfY1c2RKCNLZANP2atORuLuSqiJVxviyk6nXP4ts8oriakohWcUKQvZXrqsoYEBTF-KFxLU0D9QFeL7oonARc9c_mccHT1nrWgrfg8Bm6yU_rTGZ7w_9-Xiu2hP_iJ_IhVDkhieIXXKBnBaUalCaNNQ3H1qVFDdlDKxe6PitR-QONgMI44FpzFh5mXk12gXzSxgrvtipVBrjWj"/>
+</div>
+<div>
+<h4 class="font-headline text-xl font-bold mb-1 cursor-pointer hover:text-primary transition-colors" onclick="ItemDetails.show({name: 'Old World Smoke', price: 22, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAj2hQ0reRIkZM5ngTqxboZRVNM55UunkFCEDO1TWJ5s23_dKIcUSavDPMCQofkhoqfY1c2RKCNLZANP2atORuLuSqiJVxviyk6nXP4ts8oriakohWcUKQvZXrqsoYEBTF-KFxLU0D9QFeL7oonARc9c_mccHT1nrWgrfg8Bm6yU_rTGZ7w_9-Xiu2hP_iJ_IhVDkhieIXXKBnBaUalCaNNQ3H1qVFDdlDKxe6PitR-QONgMI44FpzFh5mXk12gXzSxgrvtipVBrjWj', type: 'cocktail', description: 'Peated scotch, maple reduction, black walnut bitters.', ingredients: 'Peated Scotch, Maple Reduction, Black Walnut Bitters.'})">Old World Smoke</h4>
+<p class="text-sm text-on-surface-variant mb-3">Peated scotch, maple reduction, black walnut bitters.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-semibold">$22</span>
+<button onclick="Cart.addItem({name: 'Old World Smoke', price: 22, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAj2hQ0reRIkZM5ngTqxboZRVNM55UunkFCEDO1TWJ5s23_dKIcUSavDPMCQofkhoqfY1c2RKCNLZANP2atORuLuSqiJVxviyk6nXP4ts8oriakohWcUKQvZXrqsoYEBTF-KFxLU0D9QFeL7oonARc9c_mccHT1nrWgrfg8Bm6yU_rTGZ7w_9-Xiu2hP_iJ_IhVDkhieIXXKBnBaUalCaNNQ3H1qVFDdlDKxe6PitR-QONgMI44FpzFh5mXk12gXzSxgrvtipVBrjWj', type: 'cocktail'})" class="p-2 bg-white/5 hover:bg-primary hover:text-on-primary rounded-full transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-10 relative overflow-hidden">
+<div class="relative z-10 h-full flex flex-col">
+<h3 class="font-headline text-2xl font-bold mb-6">The Golden Hour</h3>
+<p class="text-on-surface-variant mb-10 leading-relaxed italic">"A tribute to the fading light of Provence. Lavender-honey vodka, pressed lemon, and effervescent champagne pearls."</p>
+<div class="mt-auto flex justify-between items-end">
+<div>
+<span class="block text-xs uppercase tracking-widest text-neutral-500 mb-1">Price</span>
+<span class="text-3xl font-headline font-bold text-primary">$21</span>
+</div>
+<button onclick="Cart.addItem({name: 'The Golden Hour', price: 21, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAx8n1O8pgpDhXtpQ8O6M0AwNW90FueWn-MC0GZOVxcQx0z2hUa8TwQW01MJ4oDIdzf5b_UBBAGLGOOgAh9TThLPg5laEn4od6f8V0MhbD_zXIyk3NqAU9qg2I6qbPADlZdm0gMnEAFflMS3taQ49TvzORVdG-X29eYLKNPAsbGEIdmM8zWt-G-ZXHTt3ziH7fm8OBBgJr90dqan9FvaGCWzcc3joTc22ylHIHFt93kNgjrwUk41QqMZiNWgA6AD-2cHRBTp-5b2uC3', type: 'cocktail'})" class="px-8 py-3 bg-white text-background font-black uppercase tracking-widest text-[10px] rounded-full hover:bg-primary hover:text-on-primary transition-all">Experience</button>
+</div>
+</div>
+<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Section: Vintage Pairings -->
+<section class="mb-32" id="pairings">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline text-3xl font-bold tracking-tight border-l-4 border-secondary pl-6 uppercase">Vintage Pairings</h2>
+<span class="text-secondary font-label text-sm tracking-widest uppercase">The Sommelier’s Vault</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Wine 1 -->
+<div class="bg-surface-container rounded-xl overflow-hidden group">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Elegant close up of red wine being poured into a large crystal glass with soft bokeh lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHRSJH8v70l4uv7raPH5S1uaKhHNbVk_q8iw-lg0vFCDSKX3oAA1vks-6gTP6-yPsWw0cWAm8bWN9WkFaXOnYqhsKNrAiNQX0It6pmDIkxCNHZ5vU_witWNFFLwRfyebqwsqFj5qXCmDTZV0Snnh1oQEhNEnfkjCKpbxLvmQCvdoO9U1g7HwSoOSNDzxubk9bTWoJB7TP5M9zlOexlhlRM88IM94UxH9TAnQmbajYzsFEHrPuwi3GD61mxRzO-pOpQJZqtLHF8nAol"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold cursor-pointer hover:text-secondary transition-colors" onclick="ItemDetails.show({name: '2017 Barolo', price: 185, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHRSJH8v70l4uv7raPH5S1uaKhHNbVk_q8iw-lg0vFCDSKX3oAA1vks-6gTP6-yPsWw0cWAm8bWN9WkFaXOnYqhsKNrAiNQX0It6pmDIkxCNHZ5vU_witWNFFLwRfyebqwsqFj5qXCmDTZV0Snnh1oQEhNEnfkjCKpbxLvmQCvdoO9U1g7HwSoOSNDzxubk9bTWoJB7TP5M9zlOexlhlRM88IM94UxH9TAnQmbajYzsFEHrPuwi3GD61mxRzO-pOpQJZqtLHF8nAol', type: 'wine', description: 'Piedmont, Italy. Notes of rose petals, dried cherries, and truffle. Paired exclusively with our Wagyu Tartare.', ingredients: 'Barolo Grape, Oak Aged, Piedmont Terroir.'})">2017 Barolo</h3>
+<span class="text-secondary font-bold">$185</span>
+</div>
+<p class="text-neutral-400 text-sm mb-6 leading-relaxed">Piedmont, Italy. Notes of rose petals, dried cherries, and truffle. Paired exclusively with our Wagyu Tartare.</p>
+<button onclick="Cart.addItem({name: '2017 Barolo', price: 185, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHRSJH8v70l4uv7raPH5S1uaKhHNbVk_q8iw-lg0vFCDSKX3oAA1vks-6gTP6-yPsWw0cWAm8bWN9WkFaXOnYqhsKNrAiNQX0It6pmDIkxCNHZ5vU_witWNFFLwRfyebqwsqFj5qXCmDTZV0Snnh1oQEhNEnfkjCKpbxLvmQCvdoO9U1g7HwSoOSNDzxubk9bTWoJB7TP5M9zlOexlhlRM88IM94UxH9TAnQmbajYzsFEHrPuwi3GD61mxRzO-pOpQJZqtLHF8nAol', type: 'wine'})" class="w-full py-3 rounded-xl border border-secondary/30 text-secondary font-black uppercase tracking-widest text-[10px] hover:bg-secondary hover:text-white transition-all">Select Vintage</button>
+</div>
+</div>
+<!-- Wine 2 -->
+<div class="bg-surface-container rounded-xl overflow-hidden group">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A bottle of white wine chilled in an ice bucket with water droplets on the glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVBEJwvyf93LNLhJ1o8L_gtRFFN43iw18DINKHY85WyqI9UVJTNTky26UjnOGAJ3h62nMeTem4NmQco88VZaM9hh8YyX1lSuCy95LPMsvB74Ub7UJuBRCqP8F2Fcq5Rrg-2iIrrQYsSNSQokoNQpp4hJlaZfDC-1gSC4qbDmsNTAOn3Wlp1IQWBqOqCkHZ2ThJI3u0aw5Ie6qwn3YegOumuxbqmABvvmGmCdtY-DOGPQeoVHoDSoUaD0dhMsrFzgH1iIXcUf8oVrik"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold cursor-pointer hover:text-secondary transition-colors" onclick="ItemDetails.show({name: 'Chablis Grand Cru', price: 210, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCVBEJwvyf93LNLhJ1o8L_gtRFFN43iw18DINKHY85WyqI9UVJTNTky26UjnOGAJ3h62nMeTem4NmQco88VZaM9hh8YyX1lSuCy95LPMsvB74Ub7UJuBRCqP8F2Fcq5Rrg-2iIrrQYsSNSQokoNQpp4hJlaZfDC-1gSC4qbDmsNTAOn3Wlp1IQWBqOqCkHZ2ThJI3u0aw5Ie6qwn3YegOumuxbqmABvvmGmCdtY-DOGPQeoVHoDSoUaD0dhMsrFzgH1iIXcUf8oVrik', type: 'wine', description: 'Burgundy, France. Sharp minerality with hints of green apple and saline. Pairs beautifully with Pacific Oysters.', ingredients: 'Chardonnay, Limestone Soil, Burgundy Heritage.'})">Chablis Grand Cru</h3>
+<span class="text-secondary font-bold">$210</span>
+</div>
+<p class="text-neutral-400 text-sm mb-6 leading-relaxed">Burgundy, France. Sharp minerality with hints of green apple and saline. Pairs beautifully with Pacific Oysters.</p>
+<button onclick="Cart.addItem({name: 'Chablis Grand Cru', price: 210, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCVBEJwvyf93LNLhJ1o8L_gtRFFN43iw18DINKHY85WyqI9UVJTNTky26UjnOGAJ3h62nMeTem4NmQco88VZaM9hh8YyX1lSuCy95LPMsvB74Ub7UJuBRCqP8F2Fcq5Rrg-2iIrrQYsSNSQokoNQpp4hJlaZfDC-1gSC4qbDmsNTAOn3Wlp1IQWBqOqCkHZ2ThJI3u0aw5Ie6qwn3YegOumuxbqmABvvmGmCdtY-DOGPQeoVHoDSoUaD0dhMsrFzgH1iIXcUf8oVrik', type: 'wine'})" class="w-full py-3 rounded-xl border border-secondary/30 text-secondary font-black uppercase tracking-widest text-[10px] hover:bg-secondary hover:text-white transition-all">Select Vintage</button>
+</div>
+</div>
+<!-- Wine 3 -->
+<div class="bg-surface-container rounded-xl overflow-hidden group">
+<div class="h-80 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Deep red wine splashing elegantly in a wine glass against a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA5OI2Mp1Nbb6XBuc4p44xw8dzhu4-aP5Tp6uIJEIhdpiuP4zG5O_MWC5uQuRqxUcsC8w6blOU6YLaOfeSrKiocc0sInBErhgUQWZV98els1Sobd5TRd6OEaQXQGv7at19NeFjn0yk-ChoxpaVwGrdmSFTPoFpKK3CxBtaIFGW2kY4SM3PHWNzrS04wssuENd8nMn3NJjE8Ltrr6sCxceJYpiKbo1ry8RkHEy6pL4xoKCbv6cNtaePbitkbrobEWBMyiEYz8ucZFuX"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline text-2xl font-bold cursor-pointer hover:text-secondary transition-colors" onclick="ItemDetails.show({name: 'Vintage Krug', price: 450, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCA5OI2Mp1Nbb6XBuc4p44xw8dzhu4-aP5Tp6uIJEIhdpiuP4zG5O_MWC5uQuRqxUcsC8w6blOU6YLaOfeSrKiocc0sInBErhgUQWZV98els1Sobd5TRd6OEaQXQGv7at19NeFjn0yk-ChoxpaVwGrdmSFTPoFpKK3CxBtaIFGW2kY4SM3PHWNzrS04wssuENd8nMn3NJjE8Ltrr6sCxceJYpiKbo1ry8RkHEy6pL4xoKCbv6cNtaePbitkbrobEWBMyiEYz8ucZFuX', type: 'wine', description: 'Reims, France. Toasted brioche, hazelnut, and citrus confit. The ultimate celebration pairing.', ingredients: 'Champagne, Prestige Cuvee, Reims Traditions.'})">Vintage Krug</h3>
+<span class="text-secondary font-bold">$450</span>
+</div>
+<p class="text-neutral-400 text-sm mb-6 leading-relaxed">Reims, France. Toasted brioche, hazelnut, and citrus confit. The ultimate celebration pairing.</p>
+<button onclick="Cart.addItem({name: 'Vintage Krug', price: 450, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCA5OI2Mp1Nbb6XBuc4p44xw8dzhu4-aP5Tp6uIJEIhdpiuP4zG5O_MWC5uQuRqxUcsC8w6blOU6YLaOfeSrKiocc0sInBErhgUQWZV98els1Sobd5TRd6OEaQXQGv7at19NeFjn0yk-ChoxpaVwGrdmSFTPoFpKK3CxBtaIFGW2kY4SM3PHWNzrS04wssuENd8nMn3NJjE8Ltrr6sCxceJYpiKbo1ry8RkHEy6pL4xoKCbv6cNtaePbitkbrobEWBMyiEYz8ucZFuX', type: 'wine'})" class="w-full py-3 rounded-xl border border-secondary/30 text-secondary font-black uppercase tracking-widest text-[10px] hover:bg-secondary hover:text-white transition-all">Select Vintage</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Rare Spirits -->
+<section id="spirits">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline text-3xl font-bold tracking-tight border-l-4 border-tertiary pl-6 uppercase">Rare Spirits</h2>
+<span class="text-tertiary font-label text-sm tracking-widest uppercase">Collectors Only</span>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between p-8 bg-surface-container-low hover:bg-surface-container transition-colors rounded-xl border-l-2 border-transparent hover:border-tertiary cursor-pointer" onclick="ItemDetails.show({name: 'Macallan 25 Year Sherry Oak', price: 145, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCn2-R8L07-7K2qZRRiTf3nPF6Qh_M-H7oO9S8uG1rFv9y9z9z9z9z9z9z9z9z9z9z9z9z9z9z', type: 'spirit', description: 'Dried fruits and ginger with a hint of wood smoke.', ingredients: 'Sherry Oak Aged, 25 Year Selection.'})">
+<div class="mb-4 md:mb-0">
+<h3 class="text-xl font-bold font-headline mb-1">Macallan 25 Year Sherry Oak</h3>
+<p class="text-sm text-neutral-500">Dried fruits and ginger with a hint of wood smoke.</p>
+</div>
+<div class="flex items-center gap-8">
+<div class="text-right">
+<span class="block text-[10px] uppercase text-neutral-500">1oz Pour</span>
+<span class="text-xl font-bold text-tertiary">$145</span>
+</div>
+<button onclick="event.stopPropagation(); Cart.addItem({name: 'Macallan 25 Year Sherry Oak', price: 145, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCn2-R8L07-7K2qZRRiTf3nPF6Qh_M-H7oO9S8uG1rFv9y9z9z9z9z9z9z9z9z9z9z9z9z9z9z', type: 'spirit'})" class="p-4 bg-tertiary/10 hover:bg-tertiary hover:text-on-tertiary rounded-full transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between p-8 bg-surface-container-low hover:bg-surface-container transition-colors rounded-xl border-l-2 border-transparent hover:border-tertiary cursor-pointer" onclick="ItemDetails.show({name: 'Pappy Van Winkle 20 Year', price: 190, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCn2-R8L07-7K2qZRRiTf3nPF6Qh_M-H7oO9S8uG1rFv9y9z9z9z9z9z9z9z9z9z9z9z9z9z9z', type: 'spirit', description: 'Intensely complex with honey, oak, and dried fruit.', ingredients: 'Wheated Bourbon, 20 Year Aged.'})">
+<div class="mb-4 md:mb-0">
+<h3 class="text-xl font-bold font-headline mb-1">Pappy Van Winkle 20 Year</h3>
+<p class="text-sm text-neutral-500">Intensely complex with honey, oak, and dried fruit.</p>
+</div>
+<div class="flex items-center gap-8">
+<div class="text-right">
+<span class="block text-[10px] uppercase text-neutral-500">1oz Pour</span>
+<span class="text-xl font-bold text-tertiary">$190</span>
+</div>
+<button onclick="event.stopPropagation(); Cart.addItem({name: 'Pappy Van Winkle 20 Year', price: 190, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCn2-R8L07-7K2qZRRiTf3nPF6Qh_M-H7oO9S8uG1rFv9y9z9z9z9z9z9z9z9z9z9z9z9z9z9z', type: 'spirit'})" class="p-4 bg-tertiary/10 hover:bg-tertiary hover:text-on-tertiary rounded-full transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between p-8 bg-surface-container-low hover:bg-surface-container transition-colors rounded-xl border-l-2 border-transparent hover:border-tertiary cursor-pointer" onclick="ItemDetails.show({name: 'Clase Azul Ultra Anejo', price: 220, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCn2-R8L07-7K2qZRRiTf3nPF6Qh_M-H7oO9S8uG1rFv9y9z9z9z9z9z9z9z9z9z9z9z9z9z9z', type: 'spirit', description: 'Decadent vanilla, caramel, and toasted almond.', ingredients: 'Ultra Anejo, Blue Agave, Aged Tequila.'})">
+<div class="mb-4 md:mb-0">
+<h3 class="text-xl font-bold font-headline mb-1">Clase Azul Ultra Anejo</h3>
+<p class="text-sm text-neutral-500">Decadent vanilla, caramel, and toasted almond.</p>
+</div>
+<div class="flex items-center gap-8">
+<div class="text-right">
+<span class="block text-[10px] uppercase text-neutral-500">1oz Pour</span>
+<span class="text-xl font-bold text-tertiary">$220</span>
+</div>
+<button onclick="event.stopPropagation(); Cart.addItem({name: 'Clase Azul Ultra Anejo', price: 220, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCn2-R8L07-7K2qZRRiTf3nPF6Qh_M-H7oO9S8uG1rFv9y9z9z9z9z9z9z9z9z9z9z9z9z9z9z', type: 'spirit'})" class="p-4 bg-tertiary/10 hover:bg-tertiary hover:text-on-tertiary rounded-full transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-surface border-t border-white/5 pb-32 md:pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-manrope font-bold text-white/80">
+                The Gastronomic Editorial
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="privacy policy.html">Privacy Policy</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="terms of services.html">Terms of Service</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="press.html">Press Kit</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="sustainability.html">Sustainability</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest text-gray-600 uppercase">
+                © 2024 The Gastronomic Editorial. All rights reserved.
+            </div>
+</div>
+</footer>
+</main>
+
+<!-- Standardized Bottom Mobile Navigation (Floating Island) -->
+<nav id="mobile-nav" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full px-6 py-3 z-50 bg-surface-variant/40 backdrop-blur-2xl shadow-xl shadow-black/40 border border-white/10 flex justify-around items-center">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium mt-1">Home</span>
+</a>
+<a href="menu.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-inter text-[10px] font-medium mt-1">Menu</span>
+</a>
+<a href="live.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">videocam</span>
+<span class="font-inter text-[10px] font-medium mt-1">Live</span>
+</a>
+<a href="track.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-inter text-[10px] font-medium mt-1">Track</span>
+</a>
+</nav>
+
+<script src="script.js"></script>
+</body></html>

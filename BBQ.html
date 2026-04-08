@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#2ecc71",
+              "on-secondary-container": "#451f00",
+              "background": "#131313",
+              "on-primary-fixed": "#241a00",
+              "inverse-on-surface": "#313030",
+              "on-tertiary-fixed-variant": "#005228",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-fixed-dim": "#ffb783",
+              "outline": "#99907c",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#4ae183",
+              "surface-variant": "#353534",
+              "surface-container": "#201f1f",
+              "secondary": "#ffb783",
+              "primary-container": "#d4af37",
+              "on-primary-fixed-variant": "#574500",
+              "primary": "#f2ca50",
+              "error-container": "#93000a",
+              "error": "#ffb4ab",
+              "tertiary-fixed": "#6bfe9c",
+              "on-tertiary-fixed": "#00210c",
+              "on-surface": "#e5e2e1",
+              "inverse-primary": "#735c00",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary-container": "#005027",
+              "on-primary-container": "#554300",
+              "on-tertiary": "#003919",
+              "on-background": "#e5e2e1",
+              "surface-container-highest": "#353534",
+              "surface": "#131313",
+              "surface-tint": "#e9c349",
+              "on-primary": "#3c2f00",
+              "surface-bright": "#393939",
+              "secondary-container": "#db7619",
+              "primary-fixed": "#ffe088",
+              "inverse-surface": "#e5e2e1",
+              "on-secondary-fixed": "#301400",
+              "on-secondary": "#4f2500",
+              "surface-container-low": "#1c1b1b",
+              "on-secondary-fixed-variant": "#713700",
+              "on-surface-variant": "#d0c5af",
+              "outline-variant": "#4d4635",
+              "surface-dim": "#131313",
+              "primary-fixed-dim": "#e9c349",
+              "secondary-fixed": "#ffdcc5",
+              "tertiary": "#54e98a",
+              "on-error": "#690005"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(32, 31, 31, 0.4);
+        backdrop-filter: blur(24px);
+      }
+      .text-glow {
+        text-shadow: 0 0 20px rgba(242, 202, 80, 0.3);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar (Standardized) -->
+<nav class="fixed top-0 w-full z-50 bg-surface-variant/40 backdrop-blur-3xl shadow-2xl shadow-black/20 no-border">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-manrope font-extrabold tracking-tighter text-white">
+    The Gastronomic Editorial
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a id="nav-experience" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="index.html">Experience</a>
+<a id="nav-menu" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="menu.html">Menu</a>
+<a id="nav-live" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="live.html">Live Kitchen</a>
+<a id="nav-track" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="track.html">Track</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="profile.html" class="text-white hover:scale-105 transition-transform duration-300" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="text-white hover:scale-105 transition-transform duration-300 relative" data-id="cart-toggle" title="Cart">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center cart-badge hidden">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Side Navigation (Web Only) -->
+<aside class="hidden lg:flex flex-col h-full py-8 bg-[#1c1b1b] w-72 fixed left-0 top-0 pt-24 z-40 border-r border-white/5">
+    <div class="px-8 mb-10">
+        <h2 class="text-lg font-black text-[#f2ca50] font-headline user-name-display">The Connoisseur</h2>
+        <p class="text-neutral-500 font-['Inter'] font-medium text-xs uppercase tracking-widest">Gold Member</p>
+    </div>
+    <nav class="flex flex-col gap-1">
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="menu.html">
+            <span class="material-symbols-outlined text-lg">local_pizza</span>
+            Gourmet Pizza
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="burgur.html">
+            <span class="material-symbols-outlined text-lg">lunch_dining</span>
+            Gourmet Burgers
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-bold text-[#d4af37] border-l-4 border-[#f2ca50] pl-4 bg-[#201f1f] translate-x-1 duration-200" href="BBQ.html">
+            <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">outdoor_grill</span>
+            Smoked BBQ
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="drinks.html">
+            <span class="material-symbols-outlined text-lg">local_bar</span>
+            The Liquid Press
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="dessert.html">
+            <span class="material-symbols-outlined text-lg">icecream</span>
+            Sweet Finale
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="track.html">
+            <span class="material-symbols-outlined text-lg">local_shipping</span>
+            Track Order
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="profile.html">
+            <span class="material-symbols-outlined text-lg">history</span>
+            Order History
+        </a>
+    </nav>
+<div class="mt-auto px-6">
+<button class="w-full py-4 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-sm uppercase tracking-widest shadow-xl shadow-primary/10 hover:scale-[1.02] active:scale-95 transition-all">
+                Book a Table
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 min-h-screen">
+<!-- Mobile Category Filter (Horizontal Scroll) -->
+<nav class="lg:hidden flex overflow-x-auto py-6 mb-12 gap-4 no-scrollbar -mx-8 px-8 sticky top-[72px] z-30 bg-background/80 backdrop-blur-xl border-b border-white/5 category-scroll">
+    <a href="menu.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">local_pizza</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Pizza</span>
+    </a>
+    <a href="burgur.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">lunch_dining</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Burgers</span>
+    </a>
+    <a href="BBQ.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">outdoor_grill</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">BBQ</span>
+    </a>
+    <a href="drinks.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">local_bar</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Drinks</span>
+    </a>
+    <a href="dessert.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">icecream</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Desserts</span>
+    </a>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-end overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Extreme close-up of slow-cooked beef brisket with glistening fat rendering, deep black pepper crust, and wisps of wood smoke on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD1ORoSBpkhgx4Ya3Sw9KCzoelfizs9Upot0caruOTAt6mhy5M1niJ8zwOM5XHkDmRBkiRsfDeut4j0RKDC_7ZaJkOOypvT8yx0civfWKh-olden30NfizhIlEpYd-vbsrMEbJbm7YEcfjkdCuDY8wZF6YDm9mrWbzoTh5viU1rfzd0TNo35b22TEfJ7fjGLnJmN_imsxkziyLZaOCAMIJaEhiE0PQUdh5kTMcbfbTdGXaVHtZeseipO0bR6ekZhdpvG1y3kiUgLvc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="relative z-10 px-8 pb-20 max-w-5xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="h-[1px] w-12 bg-primary"></span>
+<span class="text-primary font-bold uppercase tracking-[0.3em] text-xs">Exclusively Curated</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white tracking-tighter leading-none mb-6">
+                    The <span class="text-primary text-glow italic">Smokehouse</span> Selection
+                </h1>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed">
+                    Artisanal meats cured for seventy-two hours and smoked over cherry and hickory wood. A primal encounter with flavor and fire.
+                </p>
+</div>
+</section>
+<!-- Menu Content -->
+<section class="px-8 py-24 max-w-screen-2xl mx-auto">
+<!-- Category Header -->
+<div class="flex justify-between items-end mb-16 border-b border-outline-variant/15 pb-8">
+<div>
+<h2 class="font-headline text-3xl font-bold text-white mb-2">Signature Cuts</h2>
+<p class="text-neutral-500 font-medium italic">Hand-selected heritage breeds smoked to perfection.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Bento-Style Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Main Item: Midnight Brisket -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Glistening sliced beef brisket on a dark slate board with coarse salt and an espresso pepper rub visible on the bark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfJDAl5QD7-dJ35O0dl1DU0EjbzOhHf2fIzjSjaoabAzE16IQ5EYsbWbBCUyxf1Q6qbI0KmWM6jvP357pjgcQBMk7A_iV7MEUXw6OQNrtm-48AWEGEKnMMVsi7fJGtRxJVi4UYMun9YrdVAP8NJX7cV7CjHmkoLjYH-f01U6KpJcMggdVnpPwrQh3hLCkirtJn8zOmKKrmPvMOKxSbtKe2FVruO3dPrHjrSEmFzWp3i5yRyQva4HeV8_GtGJpCY2H8ST6TPXNcs0d4"/>
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest rounded-full">Chef's Signature</span>
+<span class="text-2xl font-headline font-bold text-white">$42</span>
+</div>
+<h3 class="font-headline text-3xl font-bold text-white mb-4 cursor-pointer hover:text-primary transition-colors" onclick="ItemDetails.show({name: 'Midnight Brisket', price: 42, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCfJDAl5QD7-dJ35O0dl1DU0EjbzOhHf2fIzjSjaoabAzE16IQ5EYsbWbBCUyxf1Q6qbI0KmWM6jvP357pjgcQBMk7A_iV7MEUXw6OQNrtm-48AWEGEKnMMVsi7fJGtRxJVi4UYMun9YrdVAP8NJX7cV7CjHmkoLjYH-f01U6KpJcMggdVnpPwrQh3hLCkirtJn8zOmKKrmPvMOKxSbtKe2FVruO3dPrHjrSEmFzWp3i5yRyQva4HeV8_GtGJpCY2H8ST6TPXNcs0d4', type: 'bbq', description: 'Our legendary 16-hour smoked prime brisket, seasoned with a proprietary espresso-pepper crust. Served with charred leek ash and a reduction of its own juices.', ingredients: 'Prime Brisket, Espresso-Pepper Rub, Hickory Smoke, Leek Ash.'})">Midnight Brisket</h3>
+<p class="text-on-surface-variant mb-8 text-sm leading-relaxed">
+                                Our legendary 16-hour smoked prime brisket, seasoned with a proprietary espresso-pepper crust. Served with charred leek ash and a reduction of its own juices.
+                            </p>
+<button onclick="Cart.addItem({name: 'Midnight Brisket', price: 42, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCfJDAl5QD7-dJ35O0dl1DU0EjbzOhHf2fIzjSjaoabAzE16IQ5EYsbWbBCUyxf1Q6qbI0KmWM6jvP357pjgcQBMk7A_iV7MEUXw6OQNrtm-48AWEGEKnMMVsi7fJGtRxJVi4UYMun9YrdVAP8NJX7cV7CjHmkoLjYH-f01U6KpJcMggdVnpPwrQh3hLCkirtJn8zOmKKrmPvMOKxSbtKe2FVruO3dPrHjrSEmFzWp3i5yRyQva4HeV8_GtGJpCY2H8ST6TPXNcs0d4', type: 'bbq'})" class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group/btn">
+                                Add to Order 
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Item: Glazed Heritage Ribs -->
+<div class="md:col-span-4 group flex flex-col bg-surface-container rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of glazed pork ribs with a honey bourbon sheen, sprinkled with toasted sesame seeds and fresh scallions on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5x3fI5o5IhuFLvFalH-9-Savx3kb5Aaw9JCcRrQui1wMCqxHp2A-3qI1ewkZ_JYKeHQIzwOObw133vCgHP17XGW0KJlPURQooL9RI7arCT2KOkL8SvZuSWi7gocT-GZJWYNT4H0LrGEUBmCeyvC9SeqwJxOkHkdg0KTdeiXLb8FbbblTdApacy4CgNX4tXYE08Ehdnahjern98PtzRaymqJRfXPBEQalt9MMw3E4AMxbhxS6J6QuEOP9l3WoCpswtrcP3po-VZpTE"/>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex justify-between mb-4">
+<h3 class="font-headline text-xl font-bold text-white cursor-pointer hover:text-primary transition-colors" onclick="ItemDetails.show({name: 'Glazed Heritage Ribs', price: 36, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB5x3fI5o5IhuFLvFalH-9-Savx3kb5Aaw9JCcRrQui1wMCqxHp2A-3qI1ewkZ_JYKeHQIzwOObw133vCgHP17XGW0KJlPURQooL9RI7arCT2KOkL8SvZuSWi7gocT-GZJWYNT4H0LrGEUBmCeyvC9SeqwJxOkHkdg0KTdeiXLb8FbbblTdApacy4CgNX4tXYE08Ehdnahjern98PtzRaymqJRfXPBEQalt9MMw3E4AMxbhxS6J6QuEOP9l3WoCpswtrcP3po-VZpTE', type: 'bbq', description: 'Honey-bourbon glaze, toasted sesame, and a hint of Sichuan peppercorn for a lingering heat.', ingredients: 'Heritage Pork Ribs, Honey-Bourbon Glaze, Sesame Seeds, Sichuan Peppercorn.'})">Glazed Heritage Ribs</h3>
+<span class="text-primary font-bold">$36</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8">
+                            Honey-bourbon glaze, toasted sesame, and a hint of Sichuan peppercorn for a lingering heat.
+                        </p>
+<button onclick="Cart.addItem({name: 'Glazed Heritage Ribs', price: 36, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB5x3fI5o5IhuFLvFalH-9-Savx3kb5Aaw9JCcRrQui1wMCqxHp2A-3qI1ewkZ_JYKeHQIzwOObw133vCgHP17XGW0KJlPURQooL9RI7arCT2KOkL8SvZuSWi7gocT-GZJWYNT4H0LrGEUBmCeyvC9SeqwJxOkHkdg0KTdeiXLb8FbbblTdApacy4CgNX4tXYE08Ehdnahjern98PtzRaymqJRfXPBEQalt9MMw3E4AMxbhxS6J6QuEOP9l3WoCpswtrcP3po-VZpTE', type: 'bbq'})" class="mt-auto w-full py-3 rounded-lg border border-outline-variant/20 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary hover:border-primary transition-colors">
+                            Add to Selection
+                        </button>
+</div>
+</div>
+<!-- Third Item: Smoked Tandoori Quail -->
+<div class="md:col-span-4 group flex flex-col bg-surface-container rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute top-4 left-4 z-10 px-3 py-1 bg-tertiary/20 backdrop-blur-md text-tertiary text-[10px] font-black uppercase tracking-widest rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">eco</span> Rare Selection
+                        </div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artistically plated smoked quail with vibrant saffron yogurt swirls and bright green mint chutney droplets on a textured black plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZMK8qOvOd_dFqb1-sKgRNIQyspFyA7LnMQlLz6PLAWj0pcpZlGgizxoE9msEAhM1jnxEqaVM2D_dR8TUzfFHZyxl3zuKRMKSo-Uwv9Q33zKLOPNRC_9OXJG7NE4CEHUlig94VhjJI-haHN1P3H5et_FpTU2PNtNySc1HNCJtynqgfWxOhv3c_7QKiF4xBn_mQhkEoDFqyRbT2fkOV8TToUaO6_c5Qns3GtwKIIsCw6VZYKHKZErj2urPIX3LtBA2AvGQsonzakQl"/>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex justify-between mb-4">
+<h3 class="font-headline text-xl font-bold text-white cursor-pointer hover:text-primary transition-colors" onclick="ItemDetails.show({name: 'Smoked Tandoori Quail', price: 39, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZMK8qOvOd_dFqb1-sKgRNIQyspFyA7LnMQlLz6PLAWj0pcpZlGgizxoE9msEAhM1jnxEqaVM2D_dR8TUzfFHZyxl3zuKRMKSo-Uwv9Q33zKLOPNRC_9OXJG7NE4CEHUlig94VhjJI-haHN1P3H5et_FpTU2PNtNySc1HNCJtynqgfWxOhv3c_7QKiF4xBn_mQhkEoDFqyRbT2fkOV8TToUaO6_c5Qns3GtwKIIsCw6VZYKHKZErj2urPIX3LtBA2AvGQsonzakQl', type: 'bbq', description: 'Mesquite-smoked whole quail marinated in saffron yogurt, served with an aromatic mint and cilantro chutney.', ingredients: 'Whole Quail, Saffron Yogurt, Mesquite Smoke, Mint Chutney.'})">Smoked Tandoori Quail</h3>
+<span class="text-primary font-bold">$39</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-8">
+                            Mesquite-smoked whole quail marinated in saffron yogurt, served with an aromatic mint and cilantro chutney.
+                        </p>
+<button onclick="Cart.addItem({name: 'Smoked Tandoori Quail', price: 39, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZMK8qOvOd_dFqb1-sKgRNIQyspFyA7LnMQlLz6PLAWj0pcpZlGgizxoE9msEAhM1jnxEqaVM2D_dR8TUzfFHZyxl3zuKRMKSo-Uwv9Q33zKLOPNRC_9OXJG7NE4CEHUlig94VhjJI-haHN1P3H5et_FpTU2PNtNySc1HNCJtynqgfWxOhv3c_7QKiF4xBn_mQhkEoDFqyRbT2fkOV8TToUaO6_c5Qns3GtwKIIsCw6VZYKHKZErj2urPIX3LtBA2AvGQsonzakQl', type: 'bbq'})" class="mt-auto w-full py-3 rounded-lg border border-outline-variant/20 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary hover:border-primary transition-colors">
+                            Add to Selection
+                        </button>
+</div>
+</div>
+<!-- Featured Category Callout -->
+<div class="md:col-span-8 glass-card rounded-xl border border-outline-variant/10 p-12 flex items-center">
+<div class="max-w-md">
+<h4 class="font-headline text-2xl font-bold text-[#f2ca50] mb-4 italic">The Pitmaster's Philosophy</h4>
+<p class="text-on-surface-variant text-sm leading-loose mb-6">
+                            "We don't just cook with heat; we cook with time. Every cut is an exercise in patience, letting the wood smoke weave its story into the grain of the meat until it reaches peak tenderness."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-primary/30">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional chef in a black apron with a focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATbrn72tAVNZXixEL_Rnc68CFZeF8BJZte-gjQzpRlrCpAXjDqjoiN2rOxtaPc6lSd5yrsN2Hbp6U2URFp6cYyK8a5aRBaMkW7nv0ywHZSp8akyVp_KopaO9K5j_w-JXoXWYkifklaxtKgvvb4HxA3KbDdL-EcIZkjUzIUuonJ2TGluJ1XlERhkJEpQncpEzYGlTIZUXJll9HQqlNR9YMG6ITCzc6sZU3G6xPSX5L2dvo3l2tN4ybDy0w36fgzCJtw7tiJ5y1lYuhi"/>
+</div>
+<div>
+<p class="text-white text-xs font-bold uppercase tracking-widest">Julian Thorne</p>
+<p class="text-neutral-500 text-[10px]">Head of Culinary Arts</p>
+</div>
+</div>
+</div>
+<div class="hidden md:block ml-auto">
+<span class="material-symbols-outlined text-[120px] text-primary/5 select-none" style="font-variation-settings: 'wght' 200;">restaurant</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-surface border-t border-white/5 pb-32 md:pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-manrope font-bold text-white/80">
+                The Gastronomic Editorial
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="privacy policy.html">Privacy Policy</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="terms of services.html">Terms of Service</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="press.html">Press Kit</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="sustainability.html">Sustainability</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest text-gray-600 uppercase">
+                © 2024 The Gastronomic Editorial. All rights reserved.
+            </div>
+</div>
+</footer>
+</main>
+<!-- Standardized Bottom Mobile Navigation (Floating Island) -->
+<nav id="mobile-nav" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full px-6 py-3 z-50 bg-surface-variant/40 backdrop-blur-2xl shadow-xl shadow-black/40 border border-white/10 flex justify-around items-center">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium mt-1">Home</span>
+</a>
+<a href="menu.html" class="flex flex-col items-center justify-center text-yellow-400 relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-yellow-400 after:rounded-full scale-110">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-inter text-[10px] font-medium mt-1">Menu</span>
+</a>
+<a href="live.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">videocam</span>
+<span class="font-inter text-[10px] font-medium mt-1">Live</span>
+</a>
+<a href="track.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-inter text-[10px] font-medium mt-1">Track</span>
+</a>
+</nav>
+
+<script src="script.js"></script>
+</body></html>

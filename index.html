@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Gastronomic Editorial | Premium Culinary Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#713700",
+                        "surface-bright": "#393939",
+                        "secondary": "#ffb783",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "tertiary-fixed-dim": "#4ae183",
+                        "inverse-primary": "#735c00",
+                        "primary-container": "#d4af37",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#ffdcc5",
+                        "on-primary-fixed-variant": "#574500",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "outline-variant": "#4d4635",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#451f00",
+                        "secondary-fixed-dim": "#ffb783",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-container": "#2ecc71",
+                        "on-tertiary-fixed": "#00210c",
+                        "tertiary": "#54e98a",
+                        "on-tertiary-container": "#005027",
+                        "surface-tint": "#e9c349",
+                        "on-secondary-fixed": "#301400",
+                        "on-primary-fixed": "#241a00",
+                        "on-secondary": "#4f2500",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-container": "#db7619",
+                        "outline": "#99907c",
+                        "tertiary-fixed": "#6bfe9c",
+                        "primary": "#f2ca50",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "on-tertiary": "#003919",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "surface-variant": "#353534",
+                        "on-surface-variant": "#d0c5af",
+                        "primary-fixed": "#ffe088",
+                        "on-primary": "#3c2f00",
+                        "inverse-on-surface": "#313030"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Top Navigation Bar (Standardized) -->
+<nav class="fixed top-0 w-full z-50 bg-surface-variant/40 backdrop-blur-3xl shadow-2xl shadow-black/20 no-border">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-manrope font-extrabold tracking-tighter text-white">
+    The Gastronomic Editorial
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a id="nav-experience" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="index.html">Experience</a>
+<a id="nav-menu" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="menu.html">Menu</a>
+<a id="nav-live" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="live.html">Live Kitchen</a>
+<a id="nav-track" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="track.html">Track</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="profile.html" class="text-white hover:scale-105 transition-transform duration-300" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="text-white hover:scale-105 transition-transform duration-300 relative" data-id="cart-toggle" title="Cart">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center cart-badge hidden">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury table setting" class="w-full h-full object-cover opacity-60" data-alt="Cinematic wide shot of a luxury restaurant table setting with dim warm lighting, fine glassware, and artfully plated dark cuisine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMkP0wwAAdZb1Bpb54JrpLYa-0Cw6F1F7pEdlhhQ-cf0tDRQnv8w7uY4EtJQ1SozM_CtACBgvisAIX_eXKpXzUaf4htnH3AH87UHuOZpx6Ldl8rDLEpEhw081rtOZ97hwsDZ-duo3z8qT2WHcPwW7o5nO2B9LZKVabtXums5Hv_YItxxgMyybCfshAb4AEefVQ3LJFYJU7UzTemhOgvZ3kjaG2L5ghfACqCg5_-iNR4kMh-ZqpdV5nZaLcS6vJDMTBfk7l7Ip0TejN"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface/40 to-surface"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-6">
+<h1 class="font-manrope text-5xl md:text-8xl font-extrabold tracking-tight mb-8 leading-tight">
+                Freshly Made, <br/>
+<span class="text-primary italic">Live for You</span>
+</h1>
+<p class="font-inter text-lg md:text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">
+                Experience culinary artistry as it unfolds. Our editorial kitchen transforms seasonal ingredients into a living narrative of taste and texture.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<a href="menu.html" class="px-12 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-full hover:scale-105 transition-transform duration-300 shadow-xl shadow-primary/20">
+    Order Now
+</a>
+<a href="menu.html" class="px-12 py-5 bg-surface-variant/20 backdrop-blur-md border border-outline-variant/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300">
+    View Menu
+</a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+<span class="text-[10px] uppercase tracking-widest text-primary/60 font-medium">Explore</span>
+<div class="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</header>
+<!-- Live Cooking Intro: Bento Grid Layout -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<span class="text-primary font-manrope font-bold tracking-widest uppercase text-sm mb-4 block">The Process</span>
+<h2 class="font-manrope text-4xl md:text-6xl font-extrabold tracking-tighter leading-none">The Live <br/>Atmosphere</h2>
+</div>
+<p class="font-inter text-on-surface-variant max-w-md text-right md:pb-2">
+                Our kitchen is the stage. Witness the precision of high-flame searing and the delicate touch of plating in our open-concept gastronomic studio.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<!-- Main Feature -->
+<div class="md:col-span-7 relative group overflow-hidden rounded-3xl surface-container">
+<img alt="Chef preparing meal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close-up of a professional chef's hands delicately garnishing a modern gourmet dish with microgreens in a high-end restaurant kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQw3ee56X_ShAul-2fkiTnSFMKNawGAvlynGdWn9oDWXilCwutSQ7_NfgPqCGkBNDhueUoWLQt4bneirZZXHslfblWh9U3qUS3CklL5t2-R8ktR37TizGAXeahFzK-saV5-PrtR8g3-yoERuCjJmpsEhN2s8KvToKKQ_Ua4hJNN01A6FkfWSjihOqC3keeJxXi0FBjDF0PrW-hbcAlsKfe2SyXR9R45YqBuVql6q0rF5fawVf3PGnyi6K9TDNdkLVULB_CSDbbOiGP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-primary/90 text-on-primary text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">LIVE NOW</span>
+<h3 class="font-manrope text-3xl font-bold text-white">Culinary Choreography</h3>
+</div>
+</div>
+<!-- Side Cluster -->
+<div class="md:col-span-5 grid grid-rows-2 gap-6">
+<div class="relative group overflow-hidden rounded-3xl surface-container">
+<img alt="Gourmet dish" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Exquisite plating of roasted sea bass with vibrant seasonal vegetables on a dark ceramic plate with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbiVi8dqmyhlPCdyT3wwtBCaI0wZ4kQT4i3G6NM-U0zowyKuNvPz5uKuB18UI9E3jHqzb-LLHZ5q2fVMXzg9DzGAedOqotf3y0__BePix0ELRLYeS7mGwrlAEV174GlG7MzevsLJPPSrCA_r8xUdoPIai79TaG2Eo-X_aMRUt-CdsOMdwgz-hMx-ZQYks43xYA903kGLVaH--0xS8FFfAZOLdUkrB72MZn1C2UVPL4nWu08WUijUz1ay4OLWZTLNxOMt9NcOaNNSN1"/>
+<div class="absolute inset-0 bg-surface-variant/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-manrope font-bold text-lg border border-white/40 px-6 py-2 rounded-full">Explore Ingredients</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-3xl bg-surface-container-high p-8 flex flex-col justify-end">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<h4 class="font-manrope text-2xl font-bold text-white mb-2">Curated Seasonality</h4>
+<p class="font-inter text-on-surface-variant text-sm">Every week, our editorial team selects the peak ingredients from local boutique farms to feature in our live tasting menu.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Tiers: Asymmetric Cards -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-8">
+<h2 class="font-manrope text-center text-4xl md:text-6xl font-extrabold tracking-tighter mb-20 italic">Curated Encounters</h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="flex flex-col gap-6 pt-12">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Private dining" class="w-full h-full object-cover" data-alt="Intimate private dining room with warm golden lighting, velvet chairs, and a minimalist black marble table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzUqB2lDB8mVjRBj9XS8vuDFx2qBTcZmgr3Ci_VJWYlaxiZeSYq1LCsgEaGksowx99WnpanpD0j6orC80S0ggOHWADidM-L9IQj310ZzRgyOGW7JLUTYW9BImHPcgMLcP8cc-Vu7sKGlIcc6Jm8XbvwKyVz83puaDZmmHpACmZhh2HPHmLjjFPH00XLXPkB_JdAuT479hwO4bO32gAicXZn1nmjXXDVkzwsDsDkF_C0KMne8z4HeEA8_QqN9cc9avP3d9ZNnDMAAVn"/>
+</div>
+<div>
+<h4 class="font-manrope text-2xl font-bold mb-3 uppercase tracking-tighter">The Private Booth</h4>
+<p class="text-sm text-on-surface-variant mb-4">A sanctuary of flavor. Discreet service and a personalized menu curated for your evening.</p>
+<span class="text-primary font-bold text-xs tracking-widest uppercase">Reserve Experience</span>
+</div>
+</div>
+<!-- Card 2 (Offset) -->
+<div class="flex flex-col gap-6 -mt-8">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20">
+<img alt="Chef's counter" class="w-full h-full object-cover" data-alt="High-angle shot of a chef's counter with various small gourmet plates and a glass of red wine under warm spotlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHhRBjeQ0SzrdcIEB7MR2_W_NsPI7vd47puGk5XaAhwmySGe4uo-ZuYLEoIsfL1DzdzuZEyq8PovR4XXRP44SxnSGkwFk5l4yDQsN6JX8H78fFbCCedCEGlWJyz5W6FFE3uF56U89YsSEBuL9k013WZPm5JMXWlnDgWMDX3ontEJslUpyl3Pj4vSInpKnvfwQ3z0W8ic_3Yk07bCXtawYRDmWkF3XyH-2V9etB5hXdc3RV3kzQdlELwX6jtPwHgWOnH6IOTAyao_Az"/>
+</div>
+<div>
+<h4 class="font-manrope text-2xl font-bold mb-3 uppercase tracking-tighter">Chef's Editorial</h4>
+<p class="text-sm text-on-surface-variant mb-4">Sit at the heart of the action. Our master chef presents 12 chapters of culinary storytelling.</p>
+<span class="text-primary font-bold text-xs tracking-widest uppercase">Limited Seats Available</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-6 pt-24">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Cocktail lounge" class="w-full h-full object-cover" data-alt="Mood shot of a sophisticated cocktail lounge with leather seating and a backlit bar displaying premium spirits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7y1OwD71XxXW6JdkcFJguJgE67jzFq0s8SdPWn5GF9koT_-TMslwC0jIjhtzQnjVHE7i3rYIK1lroqOjDK3TGY8kGd6PMLfbd4gCLjxAV-CeFqa1vzTIaMnsWUbP8Svb4EW8c0DRP9E9LI8bndDgH8bGP-ocLPg2w_d5KdtWBpJVwA6dXol-r-j_bXuNI5nNPTP_F3PFARjCKFdhQCsoBUussO-Jrfqzl4A5ybIl7jL0Y1-U6dDDYNUFyEfrP_x5NbAoO8RmvNHD0"/>
+</div>
+<div>
+<h4 class="font-manrope text-2xl font-bold mb-3 uppercase tracking-tighter">The Liquid Press</h4>
+<p class="text-sm text-on-surface-variant mb-4">Artisanal cocktails that echo the notes of our seasonal menu. Mixology elevated to art.</p>
+<span class="text-primary font-bold text-xs tracking-widest uppercase">Walk-ins Welcome</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Standardized Bottom Mobile Navigation (Floating Island) -->
+<nav id="mobile-nav" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full px-6 py-3 z-50 bg-surface-variant/40 backdrop-blur-2xl shadow-xl shadow-black/40 border border-white/10 flex justify-around items-center">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium mt-1">Home</span>
+</a>
+<a href="menu.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-inter text-[10px] font-medium mt-1">Menu</span>
+</a>
+<a href="live.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">videocam</span>
+<span class="font-inter text-[10px] font-medium mt-1">Live</span>
+</a>
+<a href="track.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-inter text-[10px] font-medium mt-1">Track</span>
+</a>
+</nav>
+
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-surface border-t border-white/5 pb-32 md:pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-manrope font-bold text-white/80">
+                The Gastronomic Editorial
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="privacy policy.html">Privacy Policy</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="terms of services.html">Terms of Service</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="press.html">Press Kit</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="sustainability.html">Sustainability</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest text-gray-600 uppercase">
+                © 2024 The Gastronomic Editorial. All rights reserved.
+            </div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body></html>

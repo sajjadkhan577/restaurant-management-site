@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sweet Finale | The Gastronomic Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#301400",
+              "inverse-primary": "#735c00",
+              "on-error-container": "#ffdad6",
+              "background": "#131313",
+              "surface-container-highest": "#353534",
+              "primary-fixed": "#ffe088",
+              "on-secondary": "#4f2500",
+              "surface-container-lowest": "#0e0e0e",
+              "on-surface": "#e5e2e1",
+              "secondary-fixed-dim": "#ffb783",
+              "secondary-fixed": "#ffdcc5",
+              "on-error": "#690005",
+              "secondary-container": "#db7619",
+              "error-container": "#93000a",
+              "outline": "#99907c",
+              "on-primary-container": "#554300",
+              "tertiary": "#54e98a",
+              "surface": "#131313",
+              "on-tertiary-fixed": "#00210c",
+              "surface-dim": "#131313",
+              "surface-container-low": "#1c1b1b",
+              "on-surface-variant": "#d0c5af",
+              "on-secondary-container": "#451f00",
+              "surface-tint": "#e9c349",
+              "on-primary-fixed-variant": "#574500",
+              "on-primary": "#3c2f00",
+              "inverse-surface": "#e5e2e1",
+              "on-primary-fixed": "#241a00",
+              "primary-container": "#d4af37",
+              "on-tertiary-fixed-variant": "#005228",
+              "surface-container-high": "#2a2a2a",
+              "tertiary-fixed-dim": "#4ae183",
+              "on-secondary-fixed-variant": "#713700",
+              "primary-fixed-dim": "#e9c349",
+              "on-background": "#e5e2e1",
+              "on-tertiary-container": "#005027",
+              "surface-variant": "#353534",
+              "error": "#ffb4ab",
+              "outline-variant": "#4d4635",
+              "on-tertiary": "#003919",
+              "tertiary-fixed": "#6bfe9c",
+              "surface-bright": "#393939",
+              "primary": "#f2ca50",
+              "tertiary-container": "#2ecc71",
+              "surface-container": "#201f1f",
+              "secondary": "#ffb783",
+              "inverse-on-surface": "#313030"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(42, 42, 42, 0.4);
+            backdrop-filter: blur(24px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar (Standardized) -->
+<nav class="fixed top-0 w-full z-50 bg-surface-variant/40 backdrop-blur-3xl shadow-2xl shadow-black/20 no-border">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-manrope font-extrabold tracking-tighter text-white">
+    The Gastronomic Editorial
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a id="nav-experience" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="index.html">Experience</a>
+<a id="nav-menu" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="menu.html">Menu</a>
+<a id="nav-live" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="live.html">Live Kitchen</a>
+<a id="nav-track" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="track.html">Track</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="profile.html" class="text-white hover:scale-105 transition-transform duration-300" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="text-white hover:scale-105 transition-transform duration-300 relative" data-id="cart-toggle" title="Cart">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center cart-badge hidden">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Standardized Sidebar Navigation -->
+<aside class="hidden lg:flex flex-col h-full py-8 bg-[#1c1b1b] w-72 fixed left-0 top-0 pt-24 z-40 border-r border-white/5">
+    <div class="px-8 mb-10">
+        <h2 class="text-lg font-black text-[#f2ca50] font-headline user-name-display">The Connoisseur</h2>
+        <p class="text-neutral-500 font-['Inter'] font-medium text-xs uppercase tracking-widest">Gold Member</p>
+    </div>
+    <nav class="flex flex-col gap-1">
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="menu.html">
+            <span class="material-symbols-outlined text-lg">local_pizza</span>
+            Gourmet Pizza
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="burgur.html">
+            <span class="material-symbols-outlined text-lg">lunch_dining</span>
+            Gourmet Burgers
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="BBQ.html">
+            <span class="material-symbols-outlined text-lg">outdoor_grill</span>
+            Smoked BBQ
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="drinks.html">
+            <span class="material-symbols-outlined text-lg">local_bar</span>
+            The Liquid Press
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="dessert.html">
+            <span class="material-symbols-outlined text-lg">icecream</span>
+            Sweet Finale
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="track.html">
+            <span class="material-symbols-outlined text-lg">local_shipping</span>
+            Track Order
+        </a>
+        <a class="flex items-center gap-4 py-3 font-['Inter'] font-medium text-sm text-neutral-500 pl-4 hover:bg-[#201f1f] transition-colors translate-x-1 duration-200" href="profile.html">
+            <span class="material-symbols-outlined text-lg">history</span>
+            Order History
+        </a>
+    </nav>
+    <div class="mt-auto px-6">
+        <button class="w-full py-3 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-sm tracking-wide shadow-lg hover:opacity-90 transition-all">
+            Book a Table
+        </button>
+    </div>
+</aside>
+
+<main class="lg:ml-72 min-h-screen">
+<!-- Mobile Category Filter (Horizontal Scroll) -->
+<nav class="lg:hidden flex overflow-x-auto py-6 mb-12 gap-4 no-scrollbar -mx-8 px-8 sticky top-[72px] z-30 bg-background/80 backdrop-blur-xl border-b border-white/5 category-scroll">
+    <a href="menu.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">local_pizza</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Pizza</span>
+    </a>
+    <a href="burgur.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">lunch_dining</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Burgers</span>
+    </a>
+    <a href="BBQ.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">outdoor_grill</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">BBQ</span>
+    </a>
+    <a href="drinks.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">local_bar</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Drinks</span>
+    </a>
+    <a href="dessert.html" class="category-link flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full bg-surface-container border border-white/5 text-neutral-400">
+        <span class="material-symbols-outlined text-lg">icecream</span>
+        <span class="text-[10px] font-black uppercase tracking-[0.2em]">Desserts</span>
+    </a>
+</nav>
+    <!-- Signature Sweets Bento Grid -->
+    <section class="py-20 max-w-6xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-bold font-headline tracking-tight">Signature Sweets</h2>
+<div class="h-1 w-12 bg-primary mt-2"></div>
+</div>
+<a class="text-primary text-sm font-bold uppercase tracking-widest hover:underline" href="#">Explore All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Velvet Deception -->
+<div class="md:col-span-8 group cursor-pointer overflow-hidden rounded-2xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.01]">
+<div class="relative h-96 overflow-hidden">
+<img alt="Velvet Deception Dessert" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Ultra-smooth 70% dark chocolate ganache dome with a mirror glaze, topped with edible gold leaf in a moody dark setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-ropa7jaGr7diTkteBTxWbUGgluj2ZXrkwWUOf2vjlv7u96VtFFZ8KZxsdV0XhHG5Pzu6gNt-wfj_2FKXPsa47KkN6iI7aoNz9CCxz33BXca4LfAP_KNP7sNGZqh7qP9bYt2me70OPkL_qip4yz4sZmUPJdP_WXEJrC-XdFOSc55E6qYCRfdNAu7Znhipu9xo9ao1s_PFDCU5bNTpwQ9x8WiUIP6CM4aVXXNAZn9bKlvrfuI_plwIOtOeUbO3Zx1c_nJpTqxwP9o"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full glass-card flex justify-between items-end">
+    <div class="flex-1">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="text-2xl font-bold font-headline cursor-pointer hover:text-primary transition-colors" onclick="ItemDetails.show({name: 'Velvet Deception', price: 24, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-ropa7jaGr7diTkteBTxWbUGgluj2ZXrkwWUOf2vjlv7u96VtFFZ8KZxsdV0XhHG5Pzu6gNt-wfj_2FKXPsa47KkN6iI7aoNz9CCxz33BXca4LfAP_KNP7sNGZqh7qP9bYt2me70OPkL_qip4yz4sZmUPJdP_WXEJrC-XdFOSc55E6qYCRfdNAu7Znhipu9xo9ao1s_PFDCU5bNTpwQ9x8WiUIP6CM4aVXXNAZn9bKlvrfuI_plwIOtOeUbO3Zx1c_nJpTqxwP9o', type: 'dessert', description: '70% single-origin dark chocolate ganache, infused with Tahitian vanilla and encased in a midnight cocoa shell.', ingredients: 'Single-origin Dark Chocolate, Tahitian Vanilla, Cocoa Shell, Organic Cream.'})">Velvet Deception</h3>
+            <span class="text-primary font-bold text-xl font-headline">$24</span>
+        </div>
+        <p class="text-sm text-neutral-300 font-body max-w-lg">70% single-origin dark chocolate ganache, infused with Tahitian vanilla and encased in a midnight cocoa shell.</p>
+    </div>
+    <button onclick="Cart.addItem({name: 'Velvet Deception', price: 24, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-ropa7jaGr7diTkteBTxWbUGgluj2ZXrkwWUOf2vjlv7u96VtFFZ8KZxsdV0XhHG5Pzu6gNt-wfj_2FKXPsa47KkN6iI7aoNz9CCxz33BXca4LfAP_KNP7sNGZqh7qP9bYt2me70OPkL_qip4yz4sZmUPJdP_WXEJrC-XdFOSc55E6qYCRfdNAu7Znhipu9xo9ao1s_PFDCU5bNTpwQ9x8WiUIP6CM4aVXXNAZn9bKlvrfuI_plwIOtOeUbO3Zx1c_nJpTqxwP9o', type: 'dessert'})" class="ml-6 px-6 py-2 rounded-full border border-primary/30 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">
+        Add
+    </button>
+</div>
+</div>
+</div>
+<!-- Gilded Saffron Pear -->
+<div class="md:col-span-4 group cursor-pointer overflow-hidden rounded-2xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.01]">
+<div class="relative h-96">
+<img alt="Gilded Saffron Pear" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A whole pear poached in saffron-infused syrup, glowing amber yellow, served with a dollop of honeyed mascarpone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy4SIJcrim-MPJRaEygWnd8Dd6pPsLbmpy_2mwEm_rJ6q3vdcHF2Sq3cxxHzd5mRP12VIe_etGsRCw24jne5Otm2IuF8CR108_9u8iGABUkLBO5Xu0SB67bkV4bh81IGxFm8MNZXKhMAE7wnDiquQauqQVXHcYnFKGQgLYzBHJo4SnU_yrVMJNjBqUO7y5-7dz6SDKsEZP_grzvz2SBg6iq9fUpbA6BSjBQnD0NjjmKsYnfsFpE7jBKp0WcI9kvXI7mK2GJCqclK9H"/>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full glass-card">
+    <div class="flex justify-between items-start mb-2">
+        <h3 class="text-xl font-bold font-headline hover:text-primary cursor-pointer transition-colors" onclick="ItemDetails.show({name: 'Saffron Pear', price: 18, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAy4SIJcrim-MPJRaEygWnd8Dd6pPsLbmpy_2mwEm_rJ6q3vdcHF2Sq3cxxHzd5mRP12VIe_etGsRCw24jne5Otm2IuF8CR108_9u8iGABUkLBO5Xu0SB67bkV4bh81IGxFm8MNZXKhMAE7wnDiquQauqQVXHcYnFKGQgLYzBHJo4SnU_yrVMJNjBqUO7y5-7dz6SDKsEZP_grzvz2SBg6iq9fUpbA6BSjBQnD0NjjmKsYnfsFpE7jBKp0WcI9kvXI7mK2GJCqclK9H', type: 'dessert', description: 'Gilded saffron poached pear, honeyed mascarpone, and toasted pistachio dust.', ingredients: 'Heritage Pear, Saffron Syrup, Mascarpone, Honey, Pistachio.'})">Saffron Pear</h3>
+        <span class="text-primary font-bold font-headline">$18</span>
+    </div>
+    <p class="text-xs text-neutral-400 font-body mb-4">Gilded saffron poached pear, honeyed mascarpone, and toasted pistachio dust.</p>
+    <button onclick="Cart.addItem({name: 'Saffron Pear', price: 18, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAy4SIJcrim-MPJRaEygWnd8Dd6pPsLbmpy_2mwEm_rJ6q3vdcHF2Sq3cxxHzd5mRP12VIe_etGsRCw24jne5Otm2IuF8CR108_9u8iGABUkLBO5Xu0SB67bkV4bh81IGxFm8MNZXKhMAE7wnDiquQauqQVXHcYnFKGQgLYzBHJo4SnU_yrVMJNjBqUO7y5-7dz6SDKsEZP_grzvz2SBg6iq9fUpbA6BSjBQnD0NjjmKsYnfsFpE7jBKp0WcI9kvXI7mK2GJCqclK9H', type: 'dessert'})" class="w-full py-2 rounded-xl bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">
+        Add to Order
+    </button>
+</div>
+</div>
+</div>
+<!-- Obsidian Fondant -->
+<div class="md:col-span-6 group cursor-pointer overflow-hidden rounded-2xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.01]">
+<div class="relative h-80">
+<img alt="Obsidian Fondant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A warm molten chocolate lava cake with a liquid core oozing out, dusted with dark cocoa powder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDusod3mh5LQEBUCkAVl2Et3jSNO9mrZVPiq_V9tDKynByRTVIXnIGf0bsOW9EW32lx8wxskcVxOjX_moVOwRUvvHJSTm1NOo5I_CZVfWqt3LqQj2TJy46KVmG2BukyJAibakuluRyyEpTBR2oNr7bFw_dI1WFzhQAHr-VJj5kcNBQLNOSdEFWohmBhuIXAc8_jQNX8gccshUX3jvFJSv-bXAy9q1Tzbv7jVvhbTileKbuH5mO93rBYQFT9ytTJNEi-jiz3FF11VKvL"/>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full glass-card">
+    <div class="flex justify-between items-center mb-2">
+        <h3 class="text-xl font-bold font-headline hover:text-primary cursor-pointer transition-colors" onclick="ItemDetails.show({name: 'Obsidian Fondant', price: 21, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDusod3mh5LQEBUCkAVl2Et3jSNO9mrZVPiq_V9tDKynByRTVIXnIGf0bsOW9EW32lx8wxskcVxOjX_moVOwRUvvHJSTm1NOo5I_CZVfWqt3LqQj2TJy46KVmG2BukyJAibakuluRyyEpTBR2oNr7bFw_dI1WFzhQAHr-VJj5kcNBQLNOSdEFWohmBhuIXAc8_jQNX8gccshUX3jvFJSv-bXAy9q1Tzbv7jVvhbTileKbuH5mO93rBYQFT9ytTJNEi-jiz3FF11VKvL', type: 'dessert', description: 'Warm molten heart, activated charcoal shell, served with a smoked sea salt cream.', ingredients: 'Dark Chocolate, Activated Charcoal, Smoked Sea Salt, Cream.'})">Obsidian Fondant</h3>
+        <span class="text-primary font-bold font-headline">$21</span>
+    </div>
+    <p class="text-sm text-neutral-300 font-body mb-4">Warm molten heart, activated charcoal shell, served with a smoked sea salt cream.</p>
+    <button onclick="Cart.addItem({name: 'Obsidian Fondant', price: 21, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDusod3mh5LQEBUCkAVl2Et3jSNO9mrZVPiq_V9tDKynByRTVIXnIGf0bsOW9EW32lx8wxskcVxOjX_moVOwRUvvHJSTm1NOo5I_CZVfWqt3LqQj2TJy46KVmG2BukyJAibakuluRyyEpTBR2oNr7bFw_dI1WFzhQAHr-VJj5kcNBQLNOSdEFWohmBhuIXAc8_jQNX8gccshUX3jvFJSv-bXAy9q1Tzbv7jVvhbTileKbuH5mO93rBYQFT9ytTJNEi-jiz3FF11VKvL', type: 'dessert'})" class="w-full py-2 rounded-xl border border-white/10 hover:bg-white hover:text-black transition-all">Select</button>
+</div>
+</div>
+</div>
+<!-- Lavender Honeycomb -->
+<div class="md:col-span-6 group cursor-pointer overflow-hidden rounded-2xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.01]">
+<div class="relative h-80">
+<img alt="Lavender Honeycomb" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Handcrafted honeycomb toffee pieces drizzled with lavender-infused honey on a marble slab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WDwo7ImI1VrlM294G2E73BqpPvaBLnEvU18wmRVne_bYP9LF6wxqRZxxY4vCthfKPtkPgkYIL7eFdSPVp_pICG_la4AKRu___-5u05fRP6IrAdF8goIMc4wFhnyoLrOKj90_QIsP0PL97Snyfk7HA1skncr3mq41fRf36WGIzRY_QLshW6tz33c6Qy_owCN1b2wNxLQsX0RDHgQcq6cawpeY1_xnZ9T1Uqm_kBpKTQ9boaGnFSTGnox0suFf7fZ5jtDZQD8iy8d5"/>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full glass-card">
+    <div class="flex justify-between items-center mb-2">
+        <h3 class="text-xl font-bold font-headline hover:text-primary cursor-pointer transition-colors" onclick="ItemDetails.show({name: 'Lavender Honeycomb', price: 19, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2WDwo7ImI1VrlM294G2E73BqpPvaBLnEvU18wmRVne_bYP9LF6wxqRZxxY4vCthfKPtkPgkYIL7eFdSPVp_pICG_la4AKRu___-5u05fRP6IrAdF8goIMc4wFhnyoLrOKj90_QIsP0PL97Snyfk7HA1skncr3mq41fRf36WGIzRY_QLshW6tz33c6Qy_owCN1b2wNxLQsX0RDHgQcq6cawpeY1_xnZ9T1Uqm_kBpKTQ9boaGnFSTGnox0suFf7fZ5jtDZQD8iy8d5', type: 'dessert', description: 'Wildflower lavender mousse, crispy house-made honeycomb, and bee pollen brittle.', ingredients: 'Wildflower Lavender, Organic Honey, Bee Pollen, Milk Gelato.'})">Lavender Honeycomb</h3>
+        <span class="text-primary font-bold font-headline">$19</span>
+    </div>
+    <p class="text-sm text-neutral-300 font-body mb-4">Wildflower lavender mousse, crispy house-made honeycomb, and bee pollen brittle.</p>
+    <button onclick="Cart.addItem({name: 'Lavender Honeycomb', price: 19, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2WDwo7ImI1VrlM294G2E73BqpPvaBLnEvU18wmRVne_bYP9LF6wxqRZxxY4vCthfKPtkPgkYIL7eFdSPVp_pICG_la4AKRu___-5u05fRP6IrAdF8goIMc4wFhnyoLrOKj90_QIsP0PL97Snyfk7HA1skncr3mq41fRf36WGIzRY_QLshW6tz33c6Qy_owCN1b2wNxLQsX0RDHgQcq6cawpeY1_xnZ9T1Uqm_kBpKTQ9boaGnFSTGnox0suFf7fZ5jtDZQD8iy8d5', type: 'dessert'})" class="w-full py-2 rounded-xl border border-white/10 hover:bg-white hover:text-black transition-all">Select</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pairings Section -->
+<section class="py-20 max-w-6xl mx-auto">
+<div class="bg-surface-container-low rounded-[2rem] p-8 md:p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] rotate-12" data-icon="local_bar">local_bar</span>
+</div>
+<div class="relative z-10">
+<h2 class="text-3xl font-bold font-headline mb-10">Curated Pairings</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary mb-2">
+<span class="material-symbols-outlined" data-icon="wine_bar">wine_bar</span>
+<span class="font-bold uppercase tracking-widest text-xs">Vintages</span>
+</div>
+<div class="border-b border-outline-variant/15 pb-4">
+<h4 class="font-bold mb-1">2017 Sauternes</h4>
+<p class="text-sm text-neutral-500">Perfect with Saffron Pear</p>
+</div>
+<div class="border-b border-outline-variant/15 pb-4">
+<h4 class="font-bold mb-1">Vintage Port</h4>
+<p class="text-sm text-neutral-500">Perfect with Velvet Deception</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary mb-2">
+<span class="material-symbols-outlined" data-icon="coffee">coffee</span>
+<span class="font-bold uppercase tracking-widest text-xs">Espresso</span>
+</div>
+<div class="border-b border-outline-variant/15 pb-4">
+<h4 class="font-bold mb-1">The Ritual Shot</h4>
+<p class="text-sm text-neutral-500">Ethiopian Single Origin</p>
+</div>
+<div class="border-b border-outline-variant/15 pb-4">
+<h4 class="font-bold mb-1">Affogato Moderne</h4>
+<p class="text-sm text-neutral-500">Malted milk gelato, double ristretto</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary mb-2">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-bold uppercase tracking-widest text-xs">Digestifs</span>
+</div>
+<div class="border-b border-outline-variant/15 pb-4">
+<h4 class="font-bold mb-1">Amaro Nonino</h4>
+<p class="text-sm text-neutral-500">Herbal, burnt orange notes</p>
+</div>
+<div class="border-b border-outline-variant/15 pb-4">
+<h4 class="font-bold mb-1">Grand Marnier Cuvée</h4>
+<p class="text-sm text-neutral-500">Centenaire Selection</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-surface border-t border-white/5 pb-32 md:pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-manrope font-bold text-white/80">
+                The Gastronomic Editorial
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="privacy policy.html">Privacy Policy</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="terms of services.html">Terms of Service</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="press.html">Press Kit</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="sustainability.html">Sustainability</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest text-gray-600 uppercase">
+                © 2024 The Gastronomic Editorial. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- Standardized Bottom Mobile Navigation (Floating Island) -->
+<nav id="mobile-nav" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full px-6 py-3 z-50 bg-surface-variant/40 backdrop-blur-2xl shadow-xl shadow-black/40 border border-white/10 flex justify-around items-center">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium mt-1">Home</span>
+</a>
+<a href="menu.html" class="flex flex-col items-center justify-center text-yellow-400 relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-yellow-400 after:rounded-full scale-110">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-inter text-[10px] font-medium mt-1">Menu</span>
+</a>
+<a href="live.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">videocam</span>
+<span class="font-inter text-[10px] font-medium mt-1">Live</span>
+</a>
+<a href="track.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-inter text-[10px] font-medium mt-1">Track</span>
+</a>
+</nav>
+
+<!-- Standardized Side Cart Drawer -->
+<aside id="cart-drawer" class="fixed right-0 top-0 h-full w-96 z-[100] rounded-l-3xl bg-surface-container-high/90 backdrop-blur-2xl shadow-[-20px_0px_60px_rgba(0,0,0,0.5)] flex flex-col p-8 gap-6 translate-x-full transition-transform duration-300 hidden">
+<div class="flex justify-between items-center mb-4 border-b border-white/5 pb-4">
+<div>
+<h2 class="text-xl font-bold text-white font-manrope uppercase tracking-widest">Floating Cart</h2>
+<p class="text-xs text-on-surface-variant font-inter">Your curated selection</p>
+</div>
+<button class="material-symbols-outlined text-white hover:rotate-90 transition-transform" data-id="cart-close">close</button>
+</div>
+<div class="flex flex-col gap-4 overflow-y-auto flex-grow cart-items-list pr-2">
+<!-- Dynamic Items -->
+</div>
+<div class="mt-auto space-y-4 pt-6 border-t border-white/5">
+    <div class="flex justify-between items-center px-2">
+        <span class="text-on-surface-variant text-sm font-medium">Total</span>
+        <span class="text-primary text-2xl font-extrabold cart-total-price">$0.00</span>
+    </div>
+    <button onclick="placeOrder()" class="w-full py-4 bg-primary text-on-primary font-bold rounded-full hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/20">
+        Proceed to Checkout
+    </button>
+</div>
+</aside>
+<script src="script.js"></script>
+</body></html>

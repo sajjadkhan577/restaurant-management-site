@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sustainability | The Gastronomic Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#e9c349",
+              "on-primary": "#3c2f00",
+              "on-primary-fixed": "#241a00",
+              "tertiary-fixed-dim": "#4ae183",
+              "surface": "#131313",
+              "on-tertiary-fixed": "#00210c",
+              "secondary": "#ffb783",
+              "primary-fixed-dim": "#e9c349",
+              "primary-fixed": "#ffe088",
+              "on-surface-variant": "#d0c5af",
+              "secondary-container": "#db7619",
+              "surface-dim": "#131313",
+              "outline-variant": "#4d4635",
+              "on-tertiary-container": "#005027",
+              "inverse-primary": "#735c00",
+              "error-container": "#93000a",
+              "outline": "#99907c",
+              "on-secondary-container": "#451f00",
+              "tertiary-fixed": "#6bfe9c",
+              "inverse-on-surface": "#313030",
+              "secondary-fixed-dim": "#ffb783",
+              "on-background": "#e5e2e1",
+              "secondary-fixed": "#ffdcc5",
+              "surface-container": "#201f1f",
+              "on-tertiary": "#003919",
+              "primary": "#f2ca50",
+              "on-primary-container": "#554300",
+              "primary-container": "#d4af37",
+              "on-primary-fixed-variant": "#574500",
+              "on-error": "#690005",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-variant": "#353534",
+              "surface-container-low": "#1c1b1b",
+              "on-surface": "#e5e2e1",
+              "tertiary": "#54e98a",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#353534",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2e1",
+              "background": "#131313"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(53, 53, 52, 0.4);
+        backdrop-filter: blur(24px);
+      }
+      .editorial-gradient {
+        background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar (Standardized) -->
+<nav class="fixed top-0 w-full z-50 bg-surface-variant/40 backdrop-blur-3xl shadow-2xl shadow-black/20 no-border">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-manrope font-extrabold tracking-tighter text-white">
+    The Gastronomic Editorial
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a id="nav-experience" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="index.html">Experience</a>
+<a id="nav-menu" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="menu.html">Menu</a>
+<a id="nav-live" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="live.html">Live Kitchen</a>
+<a id="nav-track" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="track.html">Track</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="profile.html" class="text-white hover:scale-105 transition-transform duration-300" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="text-white hover:scale-105 transition-transform duration-300 relative" data-id="cart-toggle" title="Cart">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center cart-badge hidden">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Sustainability" class="w-full h-full object-cover opacity-60 scale-105" data-alt="Cinematic wide shot of misty organic farmland at dawn with soft golden light hitting dew-covered crops and rolling hills background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLL0kyMrMMSLOCJBtDRFJXJgu5QdlkRu5KGINUgUooMiiLDGhckQ9WwujqIvLsgS-gI5rnTq_p6JGPw5V9xTE6uxrx0LSkuaFcn-o75FnzLZ-5rMDp2jD6EEJ6NTDfYTLjqK9r7h4Rfuw784r3sP8d1GvSBpKcf_f4NDbFDxOJ7SyczSo7bHJJBaEsvg-sAlLJqCAVTI2mYfJTpYDjCxEY9xyL5pzgR3epNqsj4DKgeucZg4rzA-rvSzZaTuPcz2jzh4pug1FqOE2"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/40 to-surface"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-3xl">
+<span class="inline-block py-1 px-3 rounded-full border border-primary/30 text-primary text-xs font-bold tracking-widest uppercase mb-6 bg-primary/10">The Green Mandate</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-[0.9] mb-8">
+                    Sustainability <br/><span class="text-primary italic">by Design</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl font-light">
+                    At The Gastronomic Editorial, we believe fine dining shouldn't cost the Earth. Our commitment to the planet is as refined as our palate.
+                </p>
+</div>
+</div>
+</header>
+<main>
+<!-- Farm to Table Narrative -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-7 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Farm to Table" class="w-full h-full object-cover" data-alt="Extreme close-up of dirty hands holding a freshly harvested heirloom beet with vibrant soil and organic greens in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4y4wDWwfd9Rc2-wvWTbTUFErEDvkgBLWYWPBNAXpy362LZD4VwvGc4FFn7M3kAp-yVtBARzIrK0KiUP1Em_Vf2mreo5DYVgO1tPc8axCetF5B_VyJkfpkJNTtd_RC5oRL2lgWtqnSyBv-C2Wc4xAlTwQfg6ElgOZkY1E-BUwJKvOYVMCeO-9JZ93FLnCIpvGB57FMxSrQlbMNxgoZraaBBWAqTuXQnRHNK1HfaNpan8k8_QnPygQo9kZP-7KgFx8GzQsjHbKMDhjj"/>
+</div>
+<div class="absolute -bottom-10 -right-10 hidden md:block w-64 h-64 rounded-xl overflow-hidden border-8 border-surface shadow-2xl">
+<img alt="Farm fresh" class="w-full h-full object-cover" data-alt="Top down view of a rustic wooden crate filled with diverse seasonal vegetables like carrots, radishes, and kale in morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl-ZKM79l6wiR09dUs_cFn8hVD8mrP0YYzCbo-_uAK0pDAiuFSzGZhFbEtGq4nZxewflR0yNo4T2Z2Yv8UjYw5ZUI23oasA1X8lPxMCA_zsNkfeb0Rum3p0RVU9xDQcJHhazvIqGL4wwx96y40tbrls8Ejm6PfA6EH1OKhKd_1sGW2ruv7Uu0YB8gdXxi-VgRtlKOc3lGCmDsSTLSY5MiaBrSPde-MBUSaz1e_9dlFwidSenuckjwXVthakECYyIihR3M7C1mH650f"/>
+</div>
+</div>
+<div class="md:col-span-5">
+<h2 class="text-4xl font-headline font-bold mb-6 text-on-surface">The 50-Mile Promise</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        90% of our ingredients travel less than 50 miles. We partner with boutique family farms in the valley to ensure that every vegetable, grain, and cut of meat represents the true terroir of our region.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1" data-icon="eco">eco</span>
+<div>
+<h4 class="font-bold text-on-surface">Regenerative Sourcing</h4>
+<p class="text-sm text-neutral-500">Supporting farms that restore soil health and biodiversity.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1" data-icon="water_drop">water_drop</span>
+<div>
+<h4 class="font-bold text-on-surface">Water Stewardship</h4>
+<p class="text-sm text-neutral-500">Implementing low-impact irrigation monitoring with our suppliers.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 bg-surface-container p-12 rounded-xl flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="package_2">package_2</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Zero Plastic Culture</h3>
+<p class="text-on-surface-variant">Our packaging is 100% compostable, crafted from mushroom mycelium and recycled plant fibers.</p>
+</div>
+<div class="mt-12">
+<div class="h-1 w-full bg-outline-variant/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[98%] shadow-[0_0_15px_rgba(255,183,131,0.5)]"></div>
+</div>
+<p class="text-xs mt-3 text-secondary uppercase tracking-widest font-bold">98% Plastic-Free Achievement</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 text-center">
+<h4 class="text-5xl font-headline font-black text-primary mb-2">12k</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant mb-6">Trees Planted</p>
+<div class="aspect-square rounded-full editorial-gradient p-1 mx-auto w-24 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-3xl" data-icon="forest">forest</span>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl border border-outline-variant/10 flex flex-col justify-center">
+<p class="text-sm text-on-surface-variant italic mb-4">"Sustainability isn't a goal, it's our operating system. Every garnish, every delivery, every choice counts."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container"></div>
+<div>
+<p class="text-xs font-bold">Chef Julian Vance</p>
+<p class="text-[10px] text-neutral-500 uppercase">Executive Director</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface relative overflow-hidden rounded-xl h-80 flex items-center px-12 group">
+<img alt="Carbon reduction" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" data-alt="Moody dark landscape of wind turbines on a coastal ridge at twilight with a deep purple and orange horizon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI03sZ82p-K1YcvlYv7XuXcdShWhaKPF_zVFNw0EMKH5l2c_1a2sS0tmfQnOd2o2NA_lQThwlGCfu0wTpcMGd3onSyE4zZYVCNX7p-pfs2OZ-ID173rq1jlSqEnBiX_NESQxBlU9R4LlM9kjp4ch3h77mHgxMzISudZuQMSbVO4jg8oHe6SbM4KVKKh9MwBJRwdQAQXvtuol2L2Pg4OkxzqgbZoSvqPK-7i_kcAQdVJVh0p1dqaEVqy7OYgG9tEFwSj4qWmLlVH_GX"/>
+<div class="relative z-10 max-w-xl">
+<h3 class="text-4xl font-headline font-bold mb-4">Carbon Neutral Logistics</h3>
+<p class="text-on-surface-variant mb-6">By 2025, our entire delivery fleet will be electric. We currently offset 110% of our carbon emissions through verified rewilding projects.</p>
+<button class="editorial-gradient text-on-primary px-8 py-3 rounded-full font-bold text-sm tracking-wide shadow-xl active:scale-95 transition-transform">
+                                View Our Impact Report
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ingredients Storytelling -->
+<section class="py-32 px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="text-center mb-20">
+<h2 class="text-5xl font-headline font-bold mb-4">Circular Gastronomy</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">We look at waste as a design flaw. Here's how we close the loop.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="space-y-6">
+<div class="aspect-video rounded-xl overflow-hidden">
+<img alt="Composting" class="w-full h-full object-cover" data-alt="Close-up of rich dark organic compost with small green sprouts emerging, symbolizing life and renewal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzgQCJA5q6Ozq1LSmsuKkq-7Xjrgg4m17tx91UO7Lvo15N9wfTLiFzwojNmzVgPU7Tj4_1PWx_5O0rKmJf3VY8wFDGHCaPSEANqo3J3GeoV0tvk7p4S9XTpPcL7wzYGFaVxC8XSUFGNg-8FbXPYYbeKf4KjEkgDjAhGwbjkJxtlk5YLorz7iRT4iAN38yXggJretRDtdrnudh-hWr70bRfTq8WtslYaNC5h0TitVIZIo8x4Iq8gRjFhUbP3-_qUmYYWTwoetPIwZ9R"/>
+</div>
+<h4 class="text-xl font-bold">1. On-Site Composting</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Kitchen scraps are processed in our aerobic digesters, creating nutrient-dense soil that goes right back to our rooftop garden.</p>
+</div>
+<div class="space-y-6">
+<div class="aspect-video rounded-xl overflow-hidden">
+<img alt="Upcycling" class="w-full h-full object-cover" data-alt="Artistic arrangement of dried citrus peels and botanical infusions in elegant glass jars on a dark marble bar top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWgjnMe2nKm_IW_RQ4Jcx3EUrH3ZNiE2RX4Xh1K0qbUltWMZ39gINTGQIISAiu5mNjGVgzBG8arNEMFNvDdxkxNN5gSrAIN4lMdsg_zvyaQQNafyZK2m7oHwIOUvfvwzUfufIWJukPZZOEMwi66ws8pZSYBixqAAFNStV3O7XHsfNe7cc1fHd_XCMrdlcY_9NZ9EfDEuZblvvKKW37VVhdPUyDJLDnkXdbHGQw9K_DiEp_LZD7A4t1QLFNrC9QXa2kwRy-FekIU8rU"/>
+</div>
+<h4 class="text-xl font-bold">2. Waste-to-Value</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Citrus rinds are converted into house-made essential oils for our cleaning products, and surplus fats are transformed into artisanal candles.</p>
+</div>
+<div class="space-y-6">
+<div class="aspect-video rounded-xl overflow-hidden">
+<img alt="Distribution" class="w-full h-full object-cover" data-alt="Professional kitchen staff carefully packing high-quality leftovers into sleek reusable containers for community distribution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8xoJahmWCksuviDAICtCmHB5DWy8OdEQGRKyen6mSuVwWzW81dqQ0sB8VMMyZe-L_pyaWW0uODjbD0DYRVp2fZXAaaEl6-xU1h-uMZ51gmCBAqLoOlNte7qZOngPSxS3jhz0wIPruXFzVAl2qNgppcie_HnmMJva2tb20cyDsdbW4LQA3IR28nov2AtFVDxhhYgpssFUaR0ddqz-0_AKYtdcywh_Qx8JZbNBhddUjt5bDPJl7a9rGEUD_tbCJMXXhwbwipuHkR48"/>
+</div>
+<h4 class="text-xl font-bold">3. Community Sharing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Any surplus edible portions are distributed nightly to local food shelters, ensuring that no meal we prepare ever goes unserved.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mb-24 px-8 max-w-7xl mx-auto">
+<div class="glass-card rounded-3xl p-16 text-center relative overflow-hidden border border-outline-variant/10">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-tertiary/10 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-6">Dine with a Conscience</h2>
+<p class="text-on-surface-variant mb-10 max-w-xl mx-auto">Join us in our mission to redefine the culinary landscape. Book a table and taste the future of sustainable fine dining.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="editorial-gradient text-on-primary px-10 py-4 rounded-full font-bold text-base shadow-2xl hover:scale-105 transition-transform active:scale-95">Book Your Experience</button>
+<button class="bg-surface-variant/40 backdrop-blur-md border border-outline-variant/30 text-on-surface px-10 py-4 rounded-full font-bold text-base hover:bg-surface-variant transition-colors">Our Sustainability Report</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-surface border-t border-white/5 pb-32 md:pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-manrope font-bold text-white/80">
+                The Gastronomic Editorial
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="privacy policy.html">Privacy Policy</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="terms of services.html">Terms of Service</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="press.html">Press Kit</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="sustainability.html">Sustainability</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest text-gray-600 uppercase">
+                © 2024 The Gastronomic Editorial. All rights reserved.
+            </div>
+</div>
+</footer>
+
+<!-- Standardized Bottom Mobile Navigation (Floating Island) -->
+<nav id="mobile-nav" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full px-6 py-3 z-50 bg-surface-variant/40 backdrop-blur-2xl shadow-xl shadow-black/40 border border-white/10 flex justify-around items-center">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium mt-1">Home</span>
+</a>
+<a href="menu.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-inter text-[10px] font-medium mt-1">Menu</span>
+</a>
+<a href="live.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">videocam</span>
+<span class="font-inter text-[10px] font-medium mt-1">Live</span>
+</a>
+<a href="track.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-inter text-[10px] font-medium mt-1">Track</span>
+</a>
+</nav>
+
+<script src="script.js"></script>
+</body></html>
+</body></html>

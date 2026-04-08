@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Tracking | The Gastronomic Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#713700",
+                        "surface-bright": "#393939",
+                        "secondary": "#ffb783",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "tertiary-fixed-dim": "#4ae183",
+                        "inverse-primary": "#735c00",
+                        "primary-container": "#d4af37",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#ffdcc5",
+                        "on-primary-fixed-variant": "#574500",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "outline-variant": "#4d4635",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#451f00",
+                        "secondary-fixed-dim": "#ffb783",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-container": "#2ecc71",
+                        "on-tertiary-fixed": "#00210c",
+                        "tertiary": "#54e98a",
+                        "on-tertiary-container": "#005027",
+                        "surface-tint": "#e9c349",
+                        "on-secondary-fixed": "#301400",
+                        "on-primary-fixed": "#241a00",
+                        "on-secondary": "#4f2500",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-container": "#db7619",
+                        "outline": "#99907c",
+                        "tertiary-fixed": "#6bfe9c",
+                        "primary": "#f2ca50",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "on-tertiary": "#003919",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "surface-variant": "#353534",
+                        "on-surface-variant": "#d0c5af",
+                        "primary-fixed": "#ffe088",
+                        "on-primary": "#3c2f00",
+                        "inverse-on-surface": "#313030"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-glow {
+            box-shadow: 0 0 20px rgba(255, 183, 131, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar (Standardized) -->
+<nav class="fixed top-0 w-full z-50 bg-surface-variant/40 backdrop-blur-3xl shadow-2xl shadow-black/20 no-border">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-manrope font-extrabold tracking-tighter text-white">
+    The Gastronomic Editorial
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a id="nav-experience" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="index.html">Experience</a>
+<a id="nav-menu" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="menu.html">Menu</a>
+<a id="nav-live" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="live.html">Live Kitchen</a>
+<a id="nav-track" class="font-inter text-sm hover:scale-105 transition-transform duration-300 text-gray-400 hover:text-white" href="track.html">Track</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="profile.html" class="text-white hover:scale-105 transition-transform duration-300" title="Profile">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button class="text-white hover:scale-105 transition-transform duration-300 relative" data-id="cart-toggle" title="Cart">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center cart-badge hidden">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-screen pt-32 pb-40 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<div class="inline-block px-4 py-1 rounded-full border border-outline-variant/20 bg-surface-container-low text-primary text-xs font-label uppercase tracking-widest mb-4">
+                Live Status
+            </div>
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-4">
+                Your Culinary <span class="text-primary italic">Journey</span>
+</h1>
+<p class="text-on-surface-variant max-w-xl text-lg font-light leading-relaxed" id="order-subtitle">
+    Order #GE-7742 is currently being curated by our executive chef. Expect perfection in every detail.
+</p>
+</header>
+<!-- Bento Grid Layout for Dashboard -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Tracking Progress Card (Main Focus) -->
+<div class="lg:col-span-8 bg-surface-container rounded-[2rem] p-8 md:p-12 shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<div class="flex flex-col items-end">
+<span class="text-on-surface-variant text-xs font-label uppercase tracking-widest mb-1">Estimated Arrival</span>
+<span class="font-headline text-4xl font-bold text-primary est-time">12 <span class="text-xl font-normal text-on-surface">mins</span></span>
+</div>
+</div>
+<h2 class="font-headline text-2xl font-bold text-white mb-16">Order Progress</h2>
+<!-- Modern Progress Tracker -->
+<div class="relative">
+<!-- Progress Background Line -->
+<div class="absolute top-6 left-0 w-full h-[2px] bg-outline-variant/20"></div>
+<!-- Progress Active Line -->
+<div class="absolute top-6 left-0 w-[0%] h-[2px] bg-gradient-to-r from-primary to-secondary shadow-[0_0_15px_rgba(255,183,131,0.5)] progress-line-active transition-all duration-500"></div>
+<!-- Steps -->
+<div class="relative flex justify-between steps-container">
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-4 group step-item">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant step-circle transition-all">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+</div>
+<span class="font-label text-xs font-medium uppercase tracking-tighter step-text">Order Received</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-4 group step-item">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant step-circle transition-all">
+<span class="material-symbols-outlined text-xl">chef_hat</span>
+</div>
+<span class="font-label text-xs font-medium uppercase tracking-tighter step-text">Preparing</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-4 group step-item">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant step-circle transition-all">
+<span class="material-symbols-outlined text-xl">local_fire_department</span>
+</div>
+<span class="font-label text-xs font-medium uppercase tracking-tighter step-text">Cooking</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center gap-4 group step-item">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant step-circle transition-all">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+<span class="font-label text-xs font-medium uppercase tracking-tighter step-text">Ready</span>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center gap-4 group step-item">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant step-circle transition-all">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</div>
+<span class="font-label text-xs font-medium uppercase tracking-tighter step-text">Delivery</span>
+</div>
+</div>
+</div>
+<!-- Subtle Informational Overlay -->
+<div class="mt-20 p-6 rounded-2xl bg-surface-container-low/50 border border-outline-variant/10 flex items-center gap-6">
+<img alt="Chef image" class="w-16 h-16 rounded-full object-cover" data-alt="Close-up portrait of a professional chef in white uniform working in a high-end dimly lit restaurant kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaavmj39WZBlPFbkGj83wV0nc_IlwJSIhFFTzs2hdIIiTWv-K36QIusTechbLHFfmS6JH8ohsOwVDE1amkGHoOI6naZgFcKzWhcXrR0-Mc2t9faLWCqYPbFAD7j9KxmFWScy7lc2Zc0sMp8Rb3g8ryKy4lIVT65Xw1WXAlFIOi9ORJL41SAR8wdqLGc3qQdpR6cbWDYqpKDT33FDByy5q9RzXcnqbd-yDk2-5fQWA2LWX9BQNlqPCz5Egshkn4dksCR5oC6VufTWZF"/>
+<div>
+<p class="text-white font-semibold">Chef Alessandro is finalizing your dish</p>
+<p class="text-on-surface-variant text-sm">Plating the Black Truffle Risotto with aged parmesan.</p>
+</div>
+<button class="ml-auto px-6 py-2 rounded-full bg-white/5 hover:bg-white/10 text-white text-xs font-label uppercase tracking-widest transition-all">
+                        View Live Feed
+                    </button>
+</div>
+</div>
+<!-- Order Details Sidebar Card -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- Summary Card -->
+<div class="bg-surface-container rounded-[2rem] p-8 shadow-xl">
+<h3 class="font-headline text-xl font-bold text-white mb-6 uppercase tracking-wider">Your Selection</h3>
+<div class="space-y-6" id="order-items-list">
+<!-- Dynamic Items -->
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/15">
+<div class="flex justify-between items-center mb-2">
+<span class="text-on-surface-variant text-xs uppercase font-label">Subtotal</span>
+<span class="text-on-surface text-sm cart-total-price">$0.00</span>
+</div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-on-surface-variant text-xs uppercase font-label">Delivery Service</span>
+<span class="text-tertiary text-xs font-label">Complimentary</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white font-bold text-lg">Total</span>
+<span class="text-primary font-bold text-xl cart-total-price">$0.00</span>
+</div>
+</div>
+</div>
+<!-- Map Mini-Card -->
+<div class="bg-surface-container rounded-[2rem] h-full overflow-hidden relative min-h-[240px]">
+<div class="absolute inset-0 grayscale opacity-40">
+<img alt="Map" class="w-full h-full object-cover" data-alt="Simplified dark aesthetic city map with minimal streets and glowing gold destination marker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdZa3Gk2XHk4fQir8cyYVd5I0XsmXSQ7ImRNVJl2nS8iQvX7Z9zAx1rN59rD2hzG0rNtVae_TeJCxVa46E7EAktV_bSinp87dsmo0QOx_nem3T5nDHwbp_TYVSlZmI7KQGijc5P-S3dexVEIn0b3m_Y326wmJXzCgFfuziutNJfkNGdMRhL25xfW2tqnreDrcKy7NxSNhOa0fn_LRdogrxwMfEqS6COtdtaYa32ZY8Q2XSV5-rN6JFVBXEksGW2H-DgHmoG461KOuv"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-center justify-between bg-surface-container-high/80 backdrop-blur-xl p-4 rounded-2xl border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-lg">location_on</span>
+</div>
+<span class="text-white text-xs font-label font-semibold">142 Park Avenue, Suite 12</span>
+</div>
+<button class="text-primary text-xs font-bold uppercase tracking-widest">Change</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action Section -->
+<section class="mt-20 flex flex-wrap gap-6 items-center justify-center">
+<button class="px-10 py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
+                Contact Concierge
+            </button>
+<button class="px-10 py-5 rounded-full bg-surface-variant/20 backdrop-blur-lg border border-outline-variant/20 text-white font-bold uppercase tracking-widest text-sm hover:bg-surface-variant/40 transition-all">
+                Modify My Order
+            </button>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-surface border-t border-white/5 pb-32 md:pb-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-screen-2xl mx-auto">
+<div class="text-xl font-manrope font-bold text-white/80">
+                The Gastronomic Editorial
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="privacy policy.html">Privacy Policy</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="terms of services.html">Terms of Service</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="press.html">Press Kit</a>
+<a class="font-inter text-xs tracking-wide text-gray-500 hover:text-yellow-400 transition-colors uppercase font-bold" href="sustainability.html">Sustainability</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest text-gray-600 uppercase">
+                © 2024 The Gastronomic Editorial. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- Standardized Bottom Mobile Navigation (Floating Island) -->
+<nav id="mobile-nav" class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full px-6 py-3 z-50 bg-surface-variant/40 backdrop-blur-2xl shadow-xl shadow-black/40 border border-white/10 flex justify-around items-center">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[10px] font-medium mt-1">Home</span>
+</a>
+<a href="menu.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-inter text-[10px] font-medium mt-1">Menu</span>
+</a>
+<a href="live.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">videocam</span>
+<span class="font-inter text-[10px] font-medium mt-1">Live</span>
+</a>
+<a href="track.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition-all">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-inter text-[10px] font-medium mt-1">Track</span>
+</a>
+</nav>
+<script src="script.js"></script>
+<script src="cooking.js"></script>
+</body></html>
